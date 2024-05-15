@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<title>Make Money REMASTERED</title>
+		<style>
+			body{
+				background-color:lightgray;
+			}
+			h1{
+				text-align:center;
+				font-size:4.9em;
+			}
+			h2{
+				font-size:1.8em;
+				font-family:Verdana,Trebuchet MS;
+			}
+			h3{
+				font-family:Helvetica,Calibri;
+			}
+			h4{
+				font-family:Helvetica,Calibri;
+				font-size:1.5em;
+			}
+			h6{
+				text-align:center;
+				font-family:Verdana;
+			}
+			#notifis{
+				font-size:1em;
+				font-style:italic;
+			}
+			#wrok{
+				border-radius:30px;
+				width:100px;
+				height:85px;
+				text-align:center;
+				border:2px solid black;
+				background-color:rgb(150,150,150);
+				transition-duration:0.1s;
+				box-shadow:0 3.5px 0 1.5px rgb(80,80,80);
+				cursor:pointer;
+			}
+			#wrok:hover{
+				background-color:rgb(135,135,135);
+			}
+			#wrok:active{
+				box-shadow:0 3px 0px 1px rgb(60,60,60);
+				transform:translateY(1.5px);
+			}
+			.displayer{
+				text-align:center;
+			}
+			#nav{
+				text-align:center;
+			}
+			#nav .navBttn{
+				background-color:rgb(150,150,150);
+				border:0.5px solid darkgray;
+				border-radius:8px;
+				color:black;
+				padding:11px 28px;
+				min-width:90px;
+				text-align:center;
+				display:inline-block;
+				font-size:14px;
+				cursor:pointer;
+				float:center;
+				transition-duration:0.05s;
+				box-shadow:0 2px 0 0.5px rgb(100,100,100);
+			}
+			#nav .navBttn:hover{
+				box-shadow:0 2px 4px 0.8px rgb(85,85,85),0 2px 0 0.5px rgb(100,100,100);
+			}
+			#nav .navBttn:active{
+				box-shadow:0 1.5px 0 0.5px rgb(90,90,90);
+				transform:translateY(1px);
+			}
+			#moneyTab{
+				background-color:rgb(140,140,140);
+				font-weight:bold;
+			}
+			#moneyDisplayer{
+				display:block;
+			}
+			#shopDisplayer{
+				display:none;
+			}
+			#casinoDisplayer{
+				display:none;
+			}
+			#prestigeDisplayer{
+				display:none;
+			}
+			#settingsDisplayer{
+				display:none;
+			}
+			#versionsDisplayer{
+				display:none;
+			}
+			#helpDisplayer{
+				display:none;
+			}
+			.item{
+				border-radius:5.5px;
+				border:0.4px solid rgb(120,120,120);
+				background-color:rgb(217,217,217);
+				cursor:pointer;
+				box-shadow:0 2px 0 0.4px rgb(85,85,85);
+				transition-duration:0.05s;
+				font-family:Tahoma;
+				padding:6px;
+				min-width:150px;
+			}
+			.item:hover{
+				box-shadow:0 2.2px 4px 0.8px rgb(85,85,85),0 2px 0 0.5px rgb(100,100,100);
+			}
+			.item:active{
+				box-shadow:0 1.4px 0 0.4px rgb(70,70,70);
+				transform:translateY(1.2px);
+			}
+			table{
+				margin-left:auto;
+ 				margin-right:auto;
+				border-spacing:1.1px;
+			}
+			th{
+				font-weight:545;
+				font-family:calibri;
+				border:2.4px solid black;
+				border-style:ridge;
+				font-size:4em;
+				height:51px;
+				width:74px;
+				padding-top:10px;
+			}
+			#darkLight,#versionTitleToggle{
+				padding:5px;
+				background-color:white;
+				color:black;
+				border-radius:7px;
+			}
+			.upgradeDisplay{
+				margin:auto;
+				width:760px;
+				text-align:left;
+			}
+		</style>
+		<script>
+		//LOCAL DATA
+			//document.getElementById('monee').innerHTML=localStorage.getItem('money');
+
+		//NAVBAR
+			function checkShopPrices(){
+				if(document.getElementById('affordWaterBottle').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=10){
+						document.getElementById('affordWaterBottle').innerHTML='Buy';
+					}else{
+						document.getElementById('affordWaterBottle').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordCart').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=50){
+						document.getElementById('affordCart').innerHTML='Buy';
+					}else{
+						document.getElementById('affordCart').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordHeadphone').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=150){
+						document.getElementById('affordHeadphone').innerHTML='Buy';
+					}else{
+						document.getElementById('affordHeadphone').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordShoes').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=500){
+						document.getElementById('affordShoes').innerHTML='Buy';
+					}else{
+						document.getElementById('affordShoes').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordPhone').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=1750){
+						document.getElementById('affordPhone').innerHTML='Buy';
+					}else{
+						document.getElementById('affordPhone').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordWatch').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=4500){
+						document.getElementById('affordWatch').innerHTML='Buy';
+					}else{
+						document.getElementById('affordWatch').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordUsedCar').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=12000){
+						document.getElementById('affordUsedCar').innerHTML='Buy';
+					}else{
+						document.getElementById('affordUsedCar').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordDecentCar').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=40000){
+						document.getElementById('affordDecentCar').innerHTML='Buy';
+					}else{
+						document.getElementById('affordDecentCar').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordHouse').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=100000){
+						document.getElementById('affordHouse').innerHTML='Buy';
+					}else{
+						document.getElementById('affordHouse').innerHTML='Cannot Afford';
+					}
+				}
+				if(document.getElementById('affordFancyCar').innerHTML!='Owned'){
+					if(document.getElementById('monee').innerHTML>=250000){
+						document.getElementById('affordFancyCar').innerHTML='Buy';
+					}else{
+						document.getElementById('affordFancyCar').innerHTML='Cannot Afford';
+					}
+				}
+
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
+					case 0:
+						if(document.getElementById('monee').innerHTML>=50000){
+							document.getElementById('affordIncomeU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordIncomeU').innerHTML='Cannot Afford';
+						}
+					break;
+					case 10:
+						document.getElementById('incomeUC').innerHTML='150K';
+						document.getElementById('incomeULN').innerHTML='20';
+						if(document.getElementById('monee').innerHTML>=150000){
+							document.getElementById('affordIncomeU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordIncomeU').innerHTML='Cannot Afford';
+						}
+					break;
+					case 20:
+						document.getElementById('affordIncomeU').innerHTML='Maxed out!';
+					break;
+				}
+			}
+			function moneyTab(){
+				document.getElementById('moneyDisplayer').style='display:block;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='black';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='white';
+				}
+			}
+			function shopTab(){
+				checkShopPrices();
+
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:block;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='black';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='white';
+				}
+			}
+			function casinoTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:block;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='black';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='white';
+				}
+			}
+			function prestigeTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:block;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='black';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='white';
+				}
+			}
+			function settingsTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:block;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+				}
+			}
+			function versionsTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:block;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+				}
+			}
+			function helpTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:block;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+				}
+			}
+		//MONEY
+			function gain(){
+				var mone=Number(document.getElementById('monee').innerHTML);
+				var incom=Number(document.getElementById('incum').innerHTML);
+
+				document.getElementById('wrok').addEventListener('keydown',function(e){
+ 			  	var key = e.keyCode||e.charCode;
+
+  		 		if (key == 13){
+    	 			e.stopPropagation();
+    				e.preventDefault();
+  				}
+				}
+				);
+
+				if(Math.floor(Math.random()*100000)==0){
+					document.getElementById('notifis').innerHTML='Super Click!';
+					setTimeout(function(){
+						document.getElementById('notifis').innerHTML='';
+					},2500);
+					document.getElementById('monee').innerHTML=mone+100*incom;
+				}else{
+					document.getElementById('monee').innerHTML=mone+incom;
+				}
+			}
+		//SHOP
+		 //ITEM SHOP
+			function buyWaterBottle(){
+				var incomeItem1=Number(document.getElementById('incum').innerHTML);
+				var incomeUp1=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordWaterBottle').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=10;
+					switch(incomeUp1){
+						case 0:
+							incomeItem1+=1;
+						break;
+						case 10:
+							incomeItem1+=1.1;
+						case 20:
+							incomeItem1+=1.2;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem1;
+					document.getElementById('affordWaterBottle').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyCart(){
+				var incomeItem2=Number(document.getElementById('incum').innerHTML);
+				var incomeUp2=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordCart').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=50;
+					switch(incomeUp2){
+						case 0:
+							incomeItem2+=1;
+						break;
+						case 10:
+							incomeItem2+=1.1;
+						case 20:
+							incomeItem2+=1.2;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem2;
+					document.getElementById('affordCart').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyHeadphone(){
+			var incomeItem3=Number(document.getElementById('incum').innerHTML);
+			var incomeUp3=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordHeadphone').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=150;
+					switch(incomeUp3){
+						case 0:
+							incomeItem3+=2;
+						break;
+						case 10:
+							incomeItem3+=2.2;
+						case 20:
+							incomeItem3+=2.4;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem3;
+					document.getElementById('affordHeadphone').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyShoes(){
+			var incomeItem4=Number(document.getElementById('incum').innerHTML);
+			var incomeUp4=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordShoes').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=500;
+					switch(incomeUp4){
+						case 0:
+							incomeItem4+=2;
+						break;
+						case 10:
+							incomeItem4+=2.2;
+						case 20:
+							incomeItem4+=2.4;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem4;
+					document.getElementById('affordShoes').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyPhone(){
+			var incomeItem5=Number(document.getElementById('incum').innerHTML);
+			var incomeUp5=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordPhone').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=1750;
+					switch(incomeUp5){
+						case 0:
+							incomeItem5+=3;
+						break;
+						case 10:
+							incomeItem5+=3.3;
+						case 20:
+							incomeItem5+=3.6;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem5;
+					document.getElementById('affordPhone').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyWatch(){
+			var incomeItem6=Number(document.getElementById('incum').innerHTML);
+			var incomeUp6=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordWatch').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=4500;
+					switch(incomeUp6){
+						case 0:
+							incomeItem6+=3;
+						break;
+						case 10:
+							incomeItem6+=3.3;
+						case 20:
+							incomeItem6+=3.6;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem6;
+					document.getElementById('affordWatch').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyUsedCar(){
+			var incomeItem7=Number(document.getElementById('incum').innerHTML);
+			var incomeUp7=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordUsedCar').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=12000;
+					switch(incomeUp7){
+						case 0:
+							incomeItem7+=4;
+						break;
+						case 10:
+							incomeItem7+=4.4;
+						case 20:
+							incomeItem7+=4.8;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem7;
+					document.getElementById('affordUsedCar').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyDecentCar(){
+			var incomeItem8=Number(document.getElementById('incum').innerHTML);
+			var incomeUp8=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordDecentCar').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=15000;
+					switch(incomeUp8){
+						case 0:
+							incomeItem8+=4;
+						break;
+						case 10:
+							incomeItem8+=4.4;
+						case 20:
+							incomeItem8+=4.8;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem8;
+					document.getElementById('affordDecentCar').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyHouse(){
+			var incomeItem9=Number(document.getElementById('incum').innerHTML);
+			var incomeUp9=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordHouse').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=100000;
+					switch(incomeUp9){
+						case 0:
+							incomeItem9+=5;
+						break;
+						case 10:
+							incomeItem9+=5.5;
+						case 20:
+							incomeItem9+=6;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem9;
+					document.getElementById('affordHouse').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+			function buyFancyCar(){
+			var incomeItem10=Number(document.getElementById('incum').innerHTML);
+			var incomeUp10=Number(document.getElementById('incomeUL').innerHTML);
+
+				if(document.getElementById('affordFancyCar').innerHTML=='Buy'){
+					document.getElementById('monee').innerHTML-=250000;
+					switch(incomeUp10){
+						case 0:
+							incomeItem10+=6;
+						break;
+						case 10:
+							incomeItem10+=6.6;
+						case 20:
+							incomeItem10+=7.2;
+						break;
+					}
+					document.getElementById('incum').innerHTML=incomeItem10;
+					document.getElementById('affordFancyCar').innerHTML='Owned';
+					checkShopPrices();
+				}
+			}
+		 //UPGRADE SHOP
+			function upgradeIncome(){
+				var upgradeItem1=Number(document.getElementById('incum').innerHTML);
+
+				if(document.getElementById('affordIncomeU').innerHTML=='Buy'){
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('monee').innerHTML-=50000;
+							upgradeItem1*=1.1;
+							document.getElementById('incum').innerHTML=upgradeItem1;
+							document.getElementById('incomeUL').innerHTML=10;
+							document.getElementById('incomeUC').innerHTML='300K';
+							document.getElementById('incomeULN').innerHTML='20';
+							checkShopPrices();
+						break;
+						case 10:
+							document.getElementById('monee').innerHTML-=150000;
+							upgradeItem1=upgradeItem1/1.1;
+							upgradeItem1*=1.2
+							document.getElementById('incum').innerHTML=upgradeItem1;
+							document.getElementById('incomeUL').innerHTML=20;
+							document.getElementById('incomeUC').innerHTML='no.';
+							document.getElementById('incomeULN').innerHTML='no.';
+							checkShopPrices();
+						break;
+					}
+				}
+			}
+		//CASINO
+			function gamble(){
+				/*
+				Hey wait a minute, you're not a developer! Who the fuck said you could be here???
+
+				Are you trying to exploit the slots machine?
+
+				I knew it! Well there's not much I can do to stop you.
+
+				Go on, allow a negative amount of money to be gambled or whatever.
+
+				You dirty rat.
+				*/
+				var stakes=document.getElementById('gambleAmount').valueAsNumber;
+				var spareMone=Number(document.getElementById('monee').innerHTML);
+				var inCome=Number(document.getElementById('incum').innerHTML);
+				var cycle;
+				if(stakes>0){
+					if(stakes<=spareMone){
+						document.getElementById('monee').innerHTML=spareMone-stakes;
+						cycle=0;
+						document.getElementById('activateSlots').disabled=true;
+						const cycler1=setInterval(function(){
+							document.getElementById('casinoSlot1').innerHTML=Math.floor((Math.random()*7)+1);
+							document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*7)+1);
+							document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*7)+1);
+							cycle+=1;
+							if(cycle==20){
+								clearInterval(cycler1);
+								switch(Math.floor(Math.random()*10)){
+									case 0:
+										document.getElementById('casinoSlot1').innerHTML=1;
+									break;
+									case 1:
+										document.getElementById('casinoSlot1').innerHTML=1;
+									break;
+									case 2:
+										document.getElementById('casinoSlot1').innerHTML=7;
+									break;
+									default:
+										document.getElementById('casinoSlot1').innerHTML=Math.floor((Math.random()*5)+2);
+								}
+								cycle=0;
+								const cycler2=setInterval(function(){
+									document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*7)+1);
+									document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*7)+1);
+									cycle+=1;
+									if(cycle==20){
+										clearInterval(cycler2);
+										switch(Math.floor(Math.random()*10)){
+											case 0:
+												document.getElementById('casinoSlot2').innerHTML=1;
+											break;
+											case 1:
+												document.getElementById('casinoSlot2').innerHTML=1;
+											break;
+											case 2:
+												document.getElementById('casinoSlot2').innerHTML=7;
+											break;
+											default:
+												document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*5)+2);
+										}
+										cycle=0;
+										const cycler3=setInterval(function(){
+											document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*7)+1);
+											cycle+=1;
+											if(cycle==20){
+												clearInterval(cycler3);
+												switch(Math.floor(Math.random()*10)){
+													case 0:
+														document.getElementById('casinoSlot3').innerHTML=1;
+													break;
+													case 1:
+														document.getElementById('casinoSlot3').innerHTML=1;
+													break;
+													case 2:
+														document.getElementById('casinoSlot3').innerHTML=7;
+													break;
+													default:
+														document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*5)+2);
+												}
+												var casinoResult1=Number(document.getElementById('casinoSlot1').innerHTML);
+												var casinoResult2=Number(document.getElementById('casinoSlot2').innerHTML);
+												var casinoResult3=Number(document.getElementById('casinoSlot3').innerHTML);
+												spareMone=Number(document.getElementById('monee').innerHTML);
+
+												if(casinoResult1==casinoResult2 && casinoResult2==casinoResult3){
+													if(casinoResult1==7){
+														document.getElementById('casinoNotifi').innerHTML='Jackpot!!<br>+$'+inCome*1000;
+														spareMone+=Number(inCome*1000);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}else if(casinoResult1==1){
+														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+inCome*25;
+														spareMone+=Number(inCome*25);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}else{
+														document.getElementById('casinoNotifi').innerHTML='Tripleee<br>+$'+inCome*100;
+														spareMone+=Number(inCome*100);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}
+												}else if(casinoResult1==casinoResult2 || casinoResult2==casinoResult3){
+													if(casinoResult2==7){
+														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+inCome*20;
+														spareMone+=Number(inCome*20);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}else if(casinoResult2==1){
+														document.getElementById('casinoNotifi').innerHTML='Minor Double<br>+$'+inCome*2;
+														spareMone+=Number(inCome*2);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}else{
+														document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+inCome*4;
+														spareMone+=Number(inCome*4);
+														document.getElementById('monee').innerHTML=spareMone;
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													}
+												}else{
+													switch(Math.floor(Math.random()*4)){
+														case 0:
+															document.getElementById('casinoNotifi').innerHTML='You should probably stop wasting your money';
+														break;
+														case 1:
+															document.getElementById('casinoNotifi').innerHTML='Seriously, stop wasting your money';
+														break;
+														case 2:
+															document.getElementById('casinoNotifi').innerHTML='Bruh y u waste money so much';
+														break;
+														case 3:
+															document.getElementById('casinoNotifi').innerHTML='You do realize you werent chosen by the universe to win or whatever';
+														break;
+													}
+													setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+												}
+											}
+										},50);
+									}
+								},50);
+							}
+						},50);
+					}else{
+						document.getElementById('casinoNotifi').innerHTML='u dont have enough mone lmao';
+						setTimeout(function(){document.getElementById('casinoNotifi').innerHTML=''},3000);
+					}
+				}else{
+					document.getElementById('casinoNotifi').innerHTML='nice try buckaroo, but i patched that exploit';
+					setTimeout(function(){document.getElementById('casinoNotifi').innerHTML=''},3000);
+				}
+			}
+		//SETTINGS
+			function darkLightMode(){
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('darkLight').innerHTML='Light Mode';
+					document.getElementById('darkLight').style='background-color:black;color:white;';
+
+					document.body.style='background-color:rgb(80,80,80);';
+				}else{
+					document.getElementById('darkLight').innerHTML='Dark Mode';
+					document.getElementById('darkLight').style='background-color:white;color:black;';
+
+					document.body.style='background-color:lightgrey;';
+					document.getElementByClass('navBttn').style.color='black';
+				}
+			}
+			function versionBelowTitle(){
+				if(document.getElementById('versionTitleToggle').innerHTML=='Hide'){
+					document.getElementById('titleVersion').style='display:none;';
+					document.getElementById('versionTitleToggle').innerHTML='Show';
+				}else{
+					document.getElementById('titleVersion').style='display:normal;';
+					document.getElementById('versionTitleToggle').innerHTML='Hide';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Make Money Remastered</h1>
+			<h6 id='titleVersion'>Alpha 1.674</h6>
+				<br><br><br>
+			<div id='nav'>
+				<button class='navBttn'id='moneyTab'type='button'onclick='moneyTab();'>Money</button>
+				<button class='navBttn'id='shopTab'type='button'onclick='shopTab();'>Shop</button>
+				<button class='navBttn'id='casinoTab'type='button'onclick='casinoTab();'>Casino</button>
+				<button class='navBttn'id='prestigeTab'type='button'onclick='prestigeTab();'>Prestige</button>
+				<button class='navBttn'id='settingsTab'type='button'onclick='settingsTab();'>Settings</button>
+				<button class='navBttn'id='versionsTab'type='button'onclick='versionsTab();'>Versions</button>
+				<button class='navBttn'id='helpTab'type='button'onclick='helpTab();'>Help</button>
+			</div>
+				<br><br><br>
+			<div class='displayer'id='moneyDisplayer'>
+				<h2>Money: $<span id='monee'>0</span></h2>
+					<h3>Income: $<span id='incum'>1</span></h3>
+						<h4 id='notifis'></h4>
+							<br>
+					<button id='wrok'type='button'onclick='gain();'onkeydown>Wrok</button>
+							<br>
+						<h4 id='status'></h4>
+			</div>
+			<div class='displayer'id='shopDisplayer'>
+				<h2>Item Shop</h2>
+					<button class='item'id='waterBottle'type='button'onclick='buyWaterBottle();'>Water Bottle<br>Cost $10  Income +1<br><span class='afford'id='affordWaterBottle'>Cannot Afford</span></button>
+					<button class='item'id='cart'type='button'onclick='buyCart();'>Cart<br>Cost $50  Income +1<br><span class='afford'id='affordCart'>Cannot Afford</span></button>
+					<button class='item'id='headphone'type='button'onclick='buyHeadphone();'>Headphones<br>Cost $150  Income +2<br><span class='afford'id='affordHeadphone'>Cannot Afford</span></button>
+					<button class='item'id='shoes'type='button'onclick='buyShoes();'>Shoes<br>Cost $500  Income +2<br><span class='afford'id='affordShoes'>Cannot Afford</span></button>
+					<button class='item'id='phone'type='button'onclick='buyPhone();'>Phone<br>Cost $1750  Income +2<br><span class='afford'id='affordPhone'>Cannot Afford</span></button>
+						<br><br>
+					<button class='item'id='watch'type='button'onclick='buyWatch();'>Luxury Watch<br>Cost $4.5K  Income +3<br><span class='afford'id='affordWatch'>Cannot Afford</span></button>
+					<button class='item'id='usedCar'type='button'onclick='buyUsedCar();'>Used Car<br>Cost $12K  Income +4<br><span class='afford'id='affordUsedCar'>Cannot Afford</span></button>
+					<button class='item'id='decentCar'type='button'onclick='buyDecentCar();'>Decent Car<br>Cost $40K  Income +4<br><span class='afford'id='affordDecentCar'>Cannot Afford</span></button>
+					<button class='item'id='house'type='button'onclick='buyHouse();'>House<br>Cost $100K  Income +5<br><span class='afford'id='affordHouse'>Cannot Afford</span></button>
+					<button class='item'id='fancyCar'type='button'onclick='buyFancyCar();'>Fancy Car<br>Cost $250k  Income +6<br><span class='afford'id='affordFancyCar'>Cannot Afford</span></button>
+						<br><br>
+
+				<h2>Upgrade Shop</h2>
+					<div class='upgradeDisplay'id='incomeUD'>
+						<h4><u><strong>Income Upgrade</strong></u></h4>
+							<button class='item'id='incomeU'type='button'onclick='upgradeIncome();'>Income Upgrade<br>Current Boost <span id='incomeUL'>0</span>%<br>Cost $<span id='incomeUC'>50K</span> Boost to <span id='incomeULN'>10</span>%<br><span class='afford'id='affordIncomeU'>Cannot Afford</span></button>
+					</div>
+					<div class='upgradeDisplay'id='superUD'>
+						<h4><u><strong>Super Click Upgrade</strong></u></h4>
+							<button class='item'id='superChanceU'type='button'onclick='upgradeSuperChance();'>Super Click Chance Upgrade<br>Current Chance <span id='superChanceUL'>1/100K</span>%<br>Cost $<span id='superChanceUC'>yes</span> Boost to <span id='superChanceULN'>1/10K</span></button>
+					</div>
+			</div>
+			<div class='displayer'id='casinoDisplayer'>
+				<h3 id='spareMonee'></h3>
+					<table>
+						<tr>
+							<th id='casinoSlot1'>0</th>
+							<th id='casinoSlot2'>0</th>
+							<th id='casinoSlot3'>0</th>
+						</tr>
+					</table>
+						<br>
+					<button id='activateSlots'type='button'onclick='gamble();'>Gamble</button>
+						<br>
+					<p id='casinoNotifi'></p>
+					<input type='number'id='gambleAmount'>
+			</div>
+			<div class='displayer'id='prestigeDisplayer'>
+				<p>Prestige Placeholder</p>
+			</div>
+			<div class='displayer'id='settingsDisplayer'>
+				<p><strong>Dark/Light Mode:</strong></p>
+					<button type='button'id='darkLight'onclick='darkLightMode()'>Dark Mode</button>
+				<p><strong>Display Version Below Title:</strong></p>
+					<button type='button'id='versionTitleToggle'onclick='versionBelowTitle();'>Hide</button>
+			</div>
+			<div class='displayer'id='versionsDisplayer'>
+			<h4 style='text-align:center;'><u>Alpha</u></h4>
+				<p><strong>Alpha 1.0:</strong><br>Yes</p>
+					<br>
+				<p><strong>Alpha 1.1:</strong><br>Added Dark Mode, but still very buggy<br>Added stuffs to some menus, including this one!</p>
+					<br>
+				<p><strong>Alpha 1.11:</strong><br>Fixed HUGE bug that made the game unplayable, sorry about that!</p>
+					<br>
+				<p><strong>Alpha 1.28:</strong><br>Changed the odds of getting a super click from 1 in a million to 1 in one hundred thousand<br>Also made it so super click notifi goes away after 2.5 sec instead of staying forever<br>Changed watch to luxery watch, which is why it costs so much<br>Fixed casino so it actually gives money, also fixed small bug where not winning sometimes wouldn't show any notifi<br>Shows how much money you've gained after winning in the casino</p>
+					<br>
+				<p><strong>Alpha 1.403:</strong><br>Redid the ENTIRE shop to make the game more difficult, also added in a preview of whats to come for upgrade shop; Income upgrade!<br>It's currently capped at 20% boost until all bugs involving it are patched<br>Fixed a lot of typos as well as making it so all version labels have a colon after them<br>By the way, the upgrade thing will most likely be VERY buggy, so if you're a tester, please let me know of bugs you find!</p>
+					<br>
+				<p><strong>Alpha 1.498:</strong><br>Fixed major bug that made you unable to buy any shop items other then water bottle, thank you to alpha testers for noticing and telling me!<br>Deleted some unessecary code to make the game run 0.00000001% faster<br>Made the game version be displayed below title at all times<br>Fixed big casino bug where your money would be set to the amount you won, instead of being added together<br>Made title slightly smaller for no reason</p>
+					<br>
+				<p><strong>Alpha 1.674:</strong><br>Nerfed cost of 20% income upgrade from 300K to 150K<br>Increased max income upgrade 50%<br>Added super click upgrades, you can now upgrade the chances of getting a super click as well as upgrade reward of super click!<br>Added option to show or hide version number below the title because some might think it looks bad<br>Made it so dark mode switch would now display what to switch to instead of what mode you're already on<br>e.g. if you're on light mode, it'll say dark mode instead of light mode<br>Fixed casino bug where amount you won was based on your income, not how much you bet, how was i so stupid to not realized this lmao<br>Added version categories</p>
+			</div>
+			<div class='displayer'id='helpDisplayer'>
+				<p>Help Placeholder</p>
+			</div>
+	</body>
+</html>
