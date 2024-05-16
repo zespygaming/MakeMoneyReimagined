@@ -95,6 +95,7 @@
 						document.getElementById('affordIncomeU').innerHTML='Maxed out!';
 					break;
 				}
+				switch(Number(document.getElementById('')))
 			}
 			function moneyTab(){
 				document.getElementById('moneyDisplayer').style='display:block;';
@@ -559,6 +560,12 @@
 						break;
 					}
 				}
+			}
+			function upgradeSuperChance(){
+				var upgradeItem2=
+			}
+			function upgradeSuperPower(){
+
 			}
 		//CASINO
 			function gamble(){
