@@ -95,7 +95,20 @@
 						document.getElementById('affordIncomeU').innerHTML='Maxed out!';
 					break;
 				}
-				switch(Number(document.getElementById('')))
+				switch(document.getElementById('superChanceUL').innerHTML){
+					case '1/100K':
+						if(document.getElementById('monee').innerHTML>=50000){
+							document.getElementById('affordSuperChanceU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordSuperChanceU').innerHTML='Cannot Afford';
+						}
+					break;
+					case '1/10K':
+						document.getElementById
+					break;
+					case '1/5K':
+					break;
+				}
 			}
 			function moneyTab(){
 				document.getElementById('moneyDisplayer').style='display:block;';
