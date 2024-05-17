@@ -627,9 +627,18 @@
 				}
 			}
 			function upgradeSuperChance(){
-				var upgradeItem2;
+				var upgradeItem2=Number(document.getElementById('incum').innerHTML);
 
-				
+				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
+					switch(document.getElementById('superChanceUL')){
+						case '1/100K':
+							document.getElementById('monee').innerHTML-=50000;
+							document.getElementById('')
+						break;
+						case '1/10K':
+						break;
+					}
+				}
 			}
 			function upgradeSuperPower(){
 
