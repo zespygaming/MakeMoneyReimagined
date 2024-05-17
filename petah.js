@@ -341,6 +341,30 @@
 			function gain(){
 				var mone=Number(document.getElementById('monee').innerHTML);
 				var incom=Number(document.getElementById('incum').innerHTML);
+				var sClickChance;
+				var sClickPower;
+				switch(document.getElementById('superChanceUL').innerHTML){
+					case '1/100K':
+						sClickChance='100000';
+					break;
+					case '1/10K':
+						sClickChance='10000';
+					break;
+					case '1/5K':
+						sClickChance='5000';
+					break;
+				}
+				switch(document.getElementById('superPowerUL').innerHTML){
+					case 'x100':
+						sClickPower='100';
+					break;
+					case 'x200':
+						sClickPower='200';
+					break;
+					case 'x300':
+						sClickPower='300';
+					break;
+				}
 
 				document.getElementById('wrok').addEventListener('keydown',function(e){
  			  	var key = e.keyCode||e.charCode;
@@ -352,12 +376,12 @@
 				}
 				);
 
-				if(Math.floor(Math.random()*100000)==0){
-					document.getElementById('notifis').innerHTML='Super Click!';
+				if(Math.floor(Math.random()*sClickChance)==0){
+					document.getElementById('notifis').innerHTML='Super Click! +$'+sClickPower*incom;
 					setTimeout(function(){
 						document.getElementById('notifis').innerHTML='';
 					},2500);
-					document.getElementById('monee').innerHTML=mone+100*incom;
+					document.getElementById('monee').innerHTML=mone+sClickPower*incom;
 				}else{
 					document.getElementById('monee').innerHTML=mone+incom;
 				}
