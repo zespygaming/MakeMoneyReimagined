@@ -104,9 +104,16 @@
 						}
 					break;
 					case '1/10K':
-						document.getElementById
+						document.getElementById('superChanceUC').innerHTML='100K';
+						document.getElementById('superChanceULN').innerHTML='1/5K';
+						if(document.getElementById('monee').innerHTML>=100000){
+							document.getElementById('affordSuperChanceU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordSuperChanceU').innerHTML='Cannot Afford';
+						}
 					break;
 					case '1/5K':
+						document.getElementById('affordSuperChanceU').innerHTML='Maxed Out!';
 					break;
 				}
 			}
@@ -701,7 +708,7 @@
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}
 												}else{
-													switch(Math.floor(Math.random()*4)){
+													switch(Math.floor(Math.random()*8)){
 														case 0:
 															document.getElementById('casinoNotifi').innerHTML='You should probably stop wasting your money';
 														break;
@@ -713,6 +720,18 @@
 														break;
 														case 3:
 															document.getElementById('casinoNotifi').innerHTML='You do realize you werent chosen by the universe to win or whatever';
+														break;
+														case 4:
+															document.getElementById('casinoNotifi').innerHTML='Fun fact: 99% of gamblers quit right before making it big';
+														break;
+														case 5:
+															document.getElementById('casinoNotifi').innerHTML='One must imagine player happy';
+														break;
+														case 6:
+															document.getElementById('casinoNotifi').innerHTML='Skill issue ngl';
+														break;
+														case 7:
+															document.getElementById('casinoNotifi').innerHTML='You lost! AHAHAHAHAHAHAHAHA!!!!';
 														break;
 													}
 													setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
