@@ -628,6 +628,8 @@
 			}
 			function upgradeSuperChance(){
 				var upgradeItem2;
+
+				
 			}
 			function upgradeSuperPower(){
 
