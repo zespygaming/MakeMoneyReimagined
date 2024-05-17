@@ -116,6 +116,27 @@
 						document.getElementById('affordSuperChanceU').innerHTML='Maxed Out!';
 					break;
 				}
+				switch(document.getElementById('superPowerUL').innerHTML){
+					case 'x100':
+						if(document.getElementById('monee').innerHTML>=55000){
+							document.getElementById('affordSuperPowerU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
+						}
+					break;
+					case 'x200':
+						document.getElementById('superPowerUC').innerHTML='125K';
+						document.getElementById('superPowerULN').innerHTML='x300';
+						if(document.getElementById('monee').innerHTML>=125000){
+							document.getElementById('affordSuperPowerU').innerHTML='Buy';
+						}else{
+							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
+						}
+					break;
+					case 'x300':
+						document.getElementById('affordSuperPowerU').innerHTML='Maxed Out!';
+					break;
+				}
 			}
 			function moneyTab(){
 				document.getElementById('moneyDisplayer').style='display:block;';
@@ -582,7 +603,7 @@
 				}
 			}
 			function upgradeSuperChance(){
-				var upgradeItem2=
+				var upgradeItem2;
 			}
 			function upgradeSuperPower(){
 
