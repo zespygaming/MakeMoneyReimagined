@@ -633,9 +633,14 @@
 					switch(document.getElementById('superChanceUL')){
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
-							document.getElementById('')
+							document.getElementById('superChanceUL').innerHTML='1/10K';
+							checkShopPrices();
 						break;
 						case '1/10K':
+							document.getElementById('monee').innerHTML-=100000;
+							document.getElementById('superChanceUL').innerHTML='1/5K';
+							document.getElementById('superChanceULN').innerHTML='no.';
+							checkShopPrices();
 						break;
 					}
 				}
