@@ -766,7 +766,7 @@
 												}else if(casinoResult1==casinoResult2 || casinoResult2==casinoResult3){
 													if(casinoResult2==7){
 														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+stakes*50;
-														spareMone+=Number(stakes*20);
+														spareMone+=Number(stakes*50);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else if(casinoResult2==1){
@@ -776,7 +776,7 @@
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else{
 														document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+stakes*3;
-														spareMone+=Number(stakes*4);
+														spareMone+=Number(stakes*3);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}
