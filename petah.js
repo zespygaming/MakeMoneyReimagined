@@ -628,7 +628,8 @@
 			}
 			function upgradeSuperChance(){
 				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
-					switch(document.getElementById('superChanceUL')){
+					document.getElementById('superChanceUC').innerHTML='lois';
+					/*switch(document.getElementById('superChanceUL')){
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
@@ -643,7 +644,7 @@
 							document.getElementById('superChanceULN').innerHTML='no.';
 							checkShopPrices();
 						break;
-					}
+					}*/
 				}
 			}
 			function upgradeSuperPower(){
