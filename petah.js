@@ -627,7 +627,7 @@
 				}
 			}
 			function upgradeSuperChance(){
-				document.getElementById('superChanceUC').innerHTML='lois';
+				document.getElementById('lois999').innerHTML='lois';
 				/*if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
 					switch(document.getElementById('superChanceUL')){
 						case '1/100K':
