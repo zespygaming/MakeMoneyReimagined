@@ -651,16 +651,15 @@
 					switch(document.getElementById('superPowerUL')){
 						case '100x':
 							document.getElementById('monee').innerHTML-=55000;
+							document.getElementById('superPowerUL').innerHTML='200x';
 							document.getElementById('superPowerUC').innerHTML='125K';
 							document.getElementById('superPowerULN').innerHTML='300x';
-							document.getElementById('superPowerUL').innerHTML='200x';
 							checkShopPrices();
 						break;
 						case '200x':
 							document.getElementById('monee').innerHTML-=125000;
 							document.getElementById('superPowerUL').innerHTML='300x';
-							document.getElementById('superPowerUC').innerHTML='100K';
-							document.getElementById('superPowerULN').innerHTML='1/10K';
+							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
 							checkShopPrices();
 						break;
