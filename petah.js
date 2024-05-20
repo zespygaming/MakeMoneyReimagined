@@ -748,35 +748,35 @@
 
 												if(casinoResult1==casinoResult2 && casinoResult2==casinoResult3){
 													if(casinoResult1==7){
-														document.getElementById('casinoNotifi').innerHTML='Jackpot!!<br>+$'+inCome*1000;
-														spareMone+=Number(inCome*1000);
+														document.getElementById('casinoNotifi').innerHTML='Jackpot!!<br>+$'+stakes*100;
+														spareMone+=Number(stakes*100);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else if(casinoResult1==1){
-														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+inCome*25;
-														spareMone+=Number(inCome*25);
+														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+stakes*10;
+														spareMone+=Number(stakes*10);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else{
-														document.getElementById('casinoNotifi').innerHTML='Tripleee<br>+$'+inCome*100;
-														spareMone+=Number(inCome*100);
+														document.getElementById('casinoNotifi').innerHTML='Tripleee<br>+$'+stakes*30;
+														spareMone+=Number(stakes*30);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}
 												}else if(casinoResult1==casinoResult2 || casinoResult2==casinoResult3){
 													if(casinoResult2==7){
-														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+inCome*20;
-														spareMone+=Number(inCome*20);
+														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+stakes*50;
+														spareMone+=Number(stakes*20);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else if(casinoResult2==1){
-														document.getElementById('casinoNotifi').innerHTML='Minor Double<br>+$'+inCome*2;
-														spareMone+=Number(inCome*2);
+														document.getElementById('casinoNotifi').innerHTML='Minor Double<br>+$'+stakes*2;
+														spareMone+=Number(stakes*2);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}else{
-														document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+inCome*4;
-														spareMone+=Number(inCome*4);
+														document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+stakes*3;
+														spareMone+=Number(stakes*4);
 														document.getElementById('monee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
 													}
