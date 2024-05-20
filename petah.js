@@ -633,12 +633,13 @@
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
 							document.getElementById('superChanceUC').innerHTML='100K';
-							document.getElementById('superChanceULN').innerHTML='1/10K';
+							document.getElementById('superChanceULN').innerHTML='1/5K';
 							checkShopPrices();
 						break;
 						case '1/10K':
 							document.getElementById('monee').innerHTML-=100000;
 							document.getElementById('superChanceUL').innerHTML='1/5K';
+							document.getElementById('superChanceUC').innerHTML='no.';
 							document.getElementById('superChanceULN').innerHTML='no.';
 							checkShopPrices();
 						break;
@@ -650,12 +651,16 @@
 					switch(document.getElementById('superPowerUL')){
 						case '100x':
 							document.getElementById('monee').innerHTML-=55000;
+							document.getElementById('superPowerUC').innerHTML='125K';
+							document.getElementById('superPowerULN').innerHTML='300x';
 							document.getElementById('superPowerUL').innerHTML='200x';
 							checkShopPrices();
 						break;
 						case '200x':
 							document.getElementById('monee').innerHTML-=125000;
 							document.getElementById('superPowerUL').innerHTML='300x';
+							document.getElementById('superPowerUC').innerHTML='100K';
+							document.getElementById('superPowerULN').innerHTML='1/10K';
 							document.getElementById('superPowerULN').innerHTML='no.';
 							checkShopPrices();
 						break;
