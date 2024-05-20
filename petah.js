@@ -627,8 +627,6 @@
 				}
 			}
 			function upgradeSuperChance(){
-				var upgradeItem2=Number(document.getElementById('incum').innerHTML);
-
 				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
 					switch(document.getElementById('superChanceUL')){
 						case '1/100K':
@@ -646,7 +644,21 @@
 				}
 			}
 			function upgradeSuperPower(){
-
+				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
+					switch(document.getElementById('superPowerUL')){
+						case '100x':
+							document.getElementById('monee').innerHTML-=55000;
+							document.getElementById('superPowerUL').innerHTML='200x';
+							checkShopPrices();
+						break;
+						case '200x':
+							document.getElementById('monee').innerHTML-=125000;
+							document.getElementById('superPowerUL').innerHTML='300x';
+							document.getElementById('superPowerULN').innerHTML='no.';
+							checkShopPrices();
+						break;
+					}
+				}
 			}
 		//CASINO
 			function gamble(){
