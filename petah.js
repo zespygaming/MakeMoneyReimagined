@@ -632,6 +632,8 @@
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
+							document.getElementById('superChanceUC').innerHTML='100K';
+							document.getElementById('superChanceULN').innerHTML='1/10K';
 							checkShopPrices();
 						break;
 						case '1/10K':
