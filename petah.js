@@ -540,7 +540,7 @@
 			var incomeUp8=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordDecentCar').innerHTML=='Buy'){
-					document.getElementById('monee').innerHTML-=15000;
+					document.getElementById('monee').innerHTML-=40000;
 					switch(incomeUp8){
 						case 0:
 							incomeItem8+=4;
