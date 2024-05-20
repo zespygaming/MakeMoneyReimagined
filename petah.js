@@ -628,8 +628,8 @@
 			}
 			function upgradeSuperChance(){
 				document.getElementById('superChanceUC').innerHTML='lois';
-				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
-					/*switch(document.getElementById('superChanceUL')){
+				/*if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
+					switch(document.getElementById('superChanceUL')){
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
@@ -644,10 +644,10 @@
 							document.getElementById('superChanceULN').innerHTML='no.';
 							checkShopPrices();
 						break;
-					}*/
-				}
+					}
+				}*/
 			}
-			function upgradeSuperPower(){
+			/*function upgradeSuperPower(){
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
 					switch(document.getElementById('superPowerUL')){
 						case '100x':
@@ -666,7 +666,7 @@
 						break;
 					}
 				}
-			}
+			}*/
 		//CASINO
 			function gamble(){
 				/*
