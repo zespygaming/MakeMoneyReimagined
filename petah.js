@@ -628,13 +628,13 @@
 			function upgradeSuperPower(){
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
 					switch(document.getElementById('superPowerUL').innerHTML){
-						case '100x':
+						case 'x100':
 							document.getElementById('monee').innerHTML-=55000;
 							document.getElementById('superPowerUL').innerHTML='200x';
 							document.getElementById('superPowerUC').innerHTML='125K';
 							document.getElementById('superPowerULN').innerHTML='300x';
 						break;
-						case '200x':
+						case 'x200':
 							document.getElementById('monee').innerHTML-=125000;
 							document.getElementById('superPowerUL').innerHTML='300x';
 							document.getElementById('superPowerUC').innerHTML='no.';
