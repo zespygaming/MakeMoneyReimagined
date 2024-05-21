@@ -625,27 +625,6 @@
 					checkShopPrices();
 				}
 			}
-			function upgradeSuperChance(){
-				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
-					switch(document.getElementById('superChanceUL').innerHTML){
-						case '1/100K':
-							document.getElementById('monee').innerHTML-=50000;
-							document.getElementById('superChanceUL').innerHTML='1/10K';
-							document.getElementById('superChanceUC').innerHTML='100K';
-							document.getElementById('superChanceULN').innerHTML='1/5K';
-						break;
-						case '1/10K':
-							document.getElementById('monee').innerHTML-=100000;
-							document.getElementById('superChanceUL').innerHTML='1/5K';
-							document.getElementById('superChanceUC').innerHTML='no.';
-							document.getElementById('superChanceULN').innerHTML='no.';
-						break;
-						default:
-							document.getElementById('lois999').innerHTML='loiss';
-					}
-					checkShopPrices();
-				}
-			}
 			function upgradeSuperPower(){
 				document.getElementById('lois999').innerHTML='los';
 				/*if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
@@ -668,6 +647,27 @@
 					}
 					checkShopPrices();
 				}*/
+			}
+			function upgradeSuperChance(){
+				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
+					switch(document.getElementById('superChanceUL').innerHTML){
+						case '1/100K':
+							document.getElementById('monee').innerHTML-=50000;
+							document.getElementById('superChanceUL').innerHTML='1/10K';
+							document.getElementById('superChanceUC').innerHTML='100K';
+							document.getElementById('superChanceULN').innerHTML='1/5K';
+						break;
+						case '1/10K':
+							document.getElementById('monee').innerHTML-=100000;
+							document.getElementById('superChanceUL').innerHTML='1/5K';
+							document.getElementById('superChanceUC').innerHTML='no.';
+							document.getElementById('superChanceULN').innerHTML='no.';
+						break;
+						default:
+							document.getElementById('lois999').innerHTML='loiss';
+					}
+					checkShopPrices();
+				}
 			}
 		//CASINO
 			function gamble(){
