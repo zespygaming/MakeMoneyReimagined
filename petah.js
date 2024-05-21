@@ -682,7 +682,6 @@
 				*/
 				var stakes=document.getElementById('gambleAmount').valueAsNumber;
 				var spareMone=Number(document.getElementById('monee').innerHTML);
-				var inCome=Number(document.getElementById('incum').innerHTML);
 				var cycle;
 				if(stakes>0){
 					if(stakes<=spareMone){
