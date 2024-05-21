@@ -627,9 +627,9 @@
 				}
 			}
 			function upgradeSuperChance(){
-				document.getElementById('lois999').innerHTML='lois';
-				/*if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
-					switch(document.getElementById('superChanceUL')){
+				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
+					document.getElementById('lois999').innerHTML='lois';
+					/*switch(document.getElementById('superChanceUL')){
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
@@ -644,8 +644,10 @@
 							document.getElementById('superChanceULN').innerHTML='no.';
 							checkShopPrices();
 						break;
-					}
-				}*/
+					}*/
+				}else{
+					document.getElementById('lois999').innerHTML='no, petah';
+				}
 			}
 			/*function upgradeSuperPower(){
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
