@@ -631,13 +631,13 @@
 					switch(what){
 						case 'x100':
 							document.getElementById('monee').innerHTML-=55000;
-							document.getElementById('superPowerUL').innerHTML='200x';
+							document.getElementById('superPowerUL').innerHTML='x200';
 							document.getElementById('superPowerUC').innerHTML='125K';
-							document.getElementById('superPowerULN').innerHTML='300x';
+							document.getElementById('superPowerULN').innerHTML='x300';
 						break;
 						case 'x200':
 							document.getElementById('monee').innerHTML-=125000;
-							document.getElementById('superPowerUL').innerHTML='300x';
+							document.getElementById('superPowerUL').innerHTML='x300';
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
 						break;
