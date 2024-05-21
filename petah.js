@@ -628,7 +628,7 @@
 			}
 			function upgradeSuperChance(){
 				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
-					switch(document.getElementById('superChanceUL')){
+					switch(document.getElementById('superChanceUL').innerHTML){
 						case '1/100K':
 							document.getElementById('monee').innerHTML-=50000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
