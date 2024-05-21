@@ -644,7 +644,7 @@
 							checkShopPrices();
 						break;
 						default:
-							document.getElementById('lois999').innerHTML='lois';
+							document.getElementById('lois999').innerHTML='loiss';
 					}
 				}
 			}
