@@ -626,9 +626,8 @@
 				}
 			}
 			function upgradeSuperPower(){
-				var what=document.getElementById('superPowerUL').innerHTML;
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
-					switch(what){
+					switch(document.getElementById('superPowerUL').innerHTML){
 						case 'x100':
 							document.getElementById('monee').innerHTML-=55000;
 							document.getElementById('superPowerUL').innerHTML='x200';
@@ -642,7 +641,7 @@
 							document.getElementById('superPowerULN').innerHTML='no.';
 						break;
 						default:
-							document.getElementById('lois999').innerHTML=what;
+							document.getElementById('lois999').innerHTML=p;
 					}
 					checkShopPrices();
 				}
