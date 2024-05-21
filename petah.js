@@ -661,6 +661,8 @@
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
 						break;
+						default:
+							document.getElementById('lois999').innerHTML='los';
 					}
 					checkShopPrices();
 				}
