@@ -647,9 +647,10 @@
 				}
 			}
 			function upgradeSuperPower(){
-				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
+				document.getElementById('lois999').innerHTML='los';
+				/*if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
 					document.getElementById('lois999').innerHTML='los';
-					/*switch(document.getElementById('superPowerUL').innerHTML){
+					switch(document.getElementById('superPowerUL').innerHTML){
 						case '100x':
 							document.getElementById('monee').innerHTML-=55000;
 							document.getElementById('superPowerUL').innerHTML='200x';
@@ -664,9 +665,9 @@
 						break;
 						default:
 							document.getElementById('lois999').innerHTML='los';
-					}*/
+					}
 					checkShopPrices();
-				}
+				}*/
 			}
 		//CASINO
 			function gamble(){
