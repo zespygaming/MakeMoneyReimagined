@@ -611,7 +611,6 @@
 							document.getElementById('incomeUL').innerHTML=10;
 							document.getElementById('incomeUC').innerHTML='300K';
 							document.getElementById('incomeULN').innerHTML='20';
-							checkShopPrices();
 						break;
 						case 10:
 							document.getElementById('monee').innerHTML-=150000;
@@ -621,9 +620,9 @@
 							document.getElementById('incomeUL').innerHTML=20;
 							document.getElementById('incomeUC').innerHTML='no.';
 							document.getElementById('incomeULN').innerHTML='no.';
-							checkShopPrices();
 						break;
 					}
+					checkShopPrices();
 				}
 			}
 			function upgradeSuperChance(){
@@ -634,40 +633,38 @@
 							document.getElementById('superChanceUL').innerHTML='1/10K';
 							document.getElementById('superChanceUC').innerHTML='100K';
 							document.getElementById('superChanceULN').innerHTML='1/5K';
-							checkShopPrices();
 						break;
 						case '1/10K':
 							document.getElementById('monee').innerHTML-=100000;
 							document.getElementById('superChanceUL').innerHTML='1/5K';
 							document.getElementById('superChanceUC').innerHTML='no.';
 							document.getElementById('superChanceULN').innerHTML='no.';
-							checkShopPrices();
 						break;
 						default:
 							document.getElementById('lois999').innerHTML='loiss';
 					}
+					checkShopPrices();
 				}
 			}
-			/*function upgradeSuperPower(){
+			function upgradeSuperPower(){
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
-					switch(document.getElementById('superPowerUL')){
+					switch(document.getElementById('superPowerUL').innerHTML){
 						case '100x':
 							document.getElementById('monee').innerHTML-=55000;
 							document.getElementById('superPowerUL').innerHTML='200x';
 							document.getElementById('superPowerUC').innerHTML='125K';
 							document.getElementById('superPowerULN').innerHTML='300x';
-							checkShopPrices();
 						break;
 						case '200x':
 							document.getElementById('monee').innerHTML-=125000;
 							document.getElementById('superPowerUL').innerHTML='300x';
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
-							checkShopPrices();
 						break;
 					}
+					checkShopPrices();
 				}
-			}*/
+			}
 		//CASINO
 			function gamble(){
 				/*
