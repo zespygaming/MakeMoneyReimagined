@@ -345,24 +345,24 @@
 				var sClickPower;
 				switch(document.getElementById('superChanceUL').innerHTML){
 					case '1/100K':
-						sClickChance='100000';
+						sClickChance=100000;
 					break;
 					case '1/10K':
-						sClickChance='10000';
+						sClickChance=10000;
 					break;
 					case '1/5K':
-						sClickChance='5000';
+						sClickChance=5000;
 					break;
 				}
 				switch(document.getElementById('superPowerUL').innerHTML){
-					case 'x100':
-						sClickPower='100';
+					case x100:
+						sClickPower=100;
 					break;
 					case 'x200':
-						sClickPower='200';
+						sClickPower=200;
 					break;
 					case 'x300':
-						sClickPower='300';
+						sClickPower=300;
 					break;
 				}
 
@@ -382,9 +382,18 @@
 						document.getElementById('notifis').innerHTML='';
 					},2500);
 					document.getElementById('monee').innerHTML=mone+sClickPower*incom;
+					document.getElementById('moneeShown').innerHTML=
 				}else{
 					document.getElementById('monee').innerHTML=mone+incom;
 				}
+			}
+			function convertMonee(){
+				var ogMonee=Number(document.getElementById('monee').innerHTML);
+				var ogMoneeShown=Math.round(ogMonee);
+
+				if(ogMonee<1000){
+					document.getElementById('moneeShown').innerHTML=ogMoneeShown;
+				}else if(ogMonee)
 			}
 		//SHOP
 		 //ITEM SHOP
