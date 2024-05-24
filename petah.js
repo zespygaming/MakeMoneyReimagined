@@ -381,20 +381,20 @@
 					setTimeout(function(){
 						document.getElementById('notifis').innerHTML='';
 					},2500);
-					document.getElementById('monee').innerHTML=mone+(sClickPower*incom);
+					document.getElementById('monee').innerHTML=mone+sClickPower*incom;
 				}else{
 					document.getElementById('monee').innerHTML=mone+incom;
 				}
 			}
-			function convertMonee(){
-				/*var ogMonee=Number(document.getElementById('monee').innerHTML);
+			/*function convertMonee(){
+				var ogMonee=Number(document.getElementById('monee').innerHTML);
 				var ogMoneeShown=Math.round(ogMonee);
 
 				if(ogMonee<1000){
 					document.getElementById('moneeShown').innerHTML=ogMoneeShown;
 				}else if(ogMonee==5){
-				}*/
-			}
+				}
+			}*/
 		//SHOP
 		 //ITEM SHOP
 			function buyWaterBottle(){
