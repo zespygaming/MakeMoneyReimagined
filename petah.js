@@ -355,7 +355,7 @@
 					break;
 				}
 				switch(document.getElementById('superPowerUL').innerHTML){
-					case x100:
+					case 'x100':
 						sClickPower='100';
 					break;
 					case 'x200':
