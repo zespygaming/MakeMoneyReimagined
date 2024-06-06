@@ -858,22 +858,22 @@
 				if(document.getElementById('versionTitleToggle').innerHTML=='Hide'){
 					document.getElementById('titleVersion').style='display:none;';
 					document.getElementById('versionTitleToggle').innerHTML='Show';
-					document.getElementById('versionTitleToggle').style.background-color='black';
+					document.getElementById('versionTitleToggle').style.backgroundColor='black';
 					document.getElementById('versionTitleToggle').style.color='white';
 				}else{
 					document.getElementById('titleVersion').style='display:normal;';
 					document.getElementById('versionTitleToggle').innerHTML='Hide';
-					document.getElementById('versionTitleToggle').style.background-color='white';
+					document.getElementById('versionTitleToggle').style.backgroundColor='white';
 					document.getElementById('versionTitleToggle').style.color='black';
 				}
 			}
 			function wrokEternal(){
 				if(document.getElementById('theOnlyThingTheyFearIsMe').innerHTML=='No'){
-					document.getElementById('theOnlyThingTheyFearIsMe').style.background-color='white';
+					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='white';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NO';
 				}else{
-					document.getElementById('theOnlyThingTheyFearIsMe').style.background-color='black';
+					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='white';
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='No';
 				}
