@@ -97,16 +97,16 @@
 				}
 				switch(document.getElementById('superChanceUL').innerHTML){
 					case '1/100K':
-						if(document.getElementById('monee').innerHTML>=50000){
+						if(document.getElementById('monee').innerHTML>=35000){
 							document.getElementById('affordSuperChanceU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperChanceU').innerHTML='Cannot Afford';
 						}
 					break;
 					case '1/10K':
-						document.getElementById('superChanceUC').innerHTML='100K';
+						document.getElementById('superChanceUC').innerHTML='80K';
 						document.getElementById('superChanceULN').innerHTML='1/5K';
-						if(document.getElementById('monee').innerHTML>=100000){
+						if(document.getElementById('monee').innerHTML>=80000){
 							document.getElementById('affordSuperChanceU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperChanceU').innerHTML='Cannot Afford';
@@ -118,16 +118,16 @@
 				}
 				switch(document.getElementById('superPowerUL').innerHTML){
 					case 'x100':
-						if(document.getElementById('monee').innerHTML>=55000){
+						if(document.getElementById('monee').innerHTML>=45000){
 							document.getElementById('affordSuperPowerU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
 						}
 					break;
 					case 'x200':
-						document.getElementById('superPowerUC').innerHTML='125K';
+						document.getElementById('superPowerUC').innerHTML='100K';
 						document.getElementById('superPowerULN').innerHTML='x300';
-						if(document.getElementById('monee').innerHTML>=125000){
+						if(document.getElementById('monee').innerHTML>=100000){
 							document.getElementById('affordSuperPowerU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
@@ -618,7 +618,7 @@
 							upgradeItem1*=1.1;
 							document.getElementById('incum').innerHTML=upgradeItem1;
 							document.getElementById('incomeUL').innerHTML=10;
-							document.getElementById('incomeUC').innerHTML='300K';
+							document.getElementById('incomeUC').innerHTML='150K';
 							document.getElementById('incomeULN').innerHTML='20';
 						break;
 						case 10:
@@ -638,13 +638,13 @@
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
 					switch(document.getElementById('superPowerUL').innerHTML){
 						case 'x100':
-							document.getElementById('monee').innerHTML-=55000;
+							document.getElementById('monee').innerHTML-=45000;
 							document.getElementById('superPowerUL').innerHTML='x200';
-							document.getElementById('superPowerUC').innerHTML='125K';
+							document.getElementById('superPowerUC').innerHTML='100K';
 							document.getElementById('superPowerULN').innerHTML='x300';
 						break;
 						case 'x200':
-							document.getElementById('monee').innerHTML-=125000;
+							document.getElementById('monee').innerHTML-=100000;
 							document.getElementById('superPowerUL').innerHTML='x300';
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
@@ -659,13 +659,13 @@
 				if(document.getElementById('affordSuperChanceU').innerHTML=='Buy'){
 					switch(document.getElementById('superChanceUL').innerHTML){
 						case '1/100K':
-							document.getElementById('monee').innerHTML-=50000;
+							document.getElementById('monee').innerHTML-=35000;
 							document.getElementById('superChanceUL').innerHTML='1/10K';
-							document.getElementById('superChanceUC').innerHTML='100K';
+							document.getElementById('superChanceUC').innerHTML='80K';
 							document.getElementById('superChanceULN').innerHTML='1/5K';
 						break;
 						case '1/10K':
-							document.getElementById('monee').innerHTML-=100000;
+							document.getElementById('monee').innerHTML-=80000;
 							document.getElementById('superChanceUL').innerHTML='1/5K';
 							document.getElementById('superChanceUC').innerHTML='no.';
 							document.getElementById('superChanceULN').innerHTML='no.';
@@ -858,8 +858,17 @@
 				if(document.getElementById('versionTitleToggle').innerHTML=='Hide'){
 					document.getElementById('titleVersion').style='display:none;';
 					document.getElementById('versionTitleToggle').innerHTML='Show';
+					document.getElementById('versionTitleToggle').style='background-color:black;color:white;';
 				}else{
 					document.getElementById('titleVersion').style='display:normal;';
 					document.getElementById('versionTitleToggle').innerHTML='Hide';
+					document.getElementById('versionTitleToggle').style='background-color:white;color:black;';
+				}
+			}
+			function wrokEternal(){
+				if(document.getElementById('theOnlyThingTheyFearIsMe').style=='background-color:black;color:white;'){
+					document.getElementById('theOnlyThingTheyFearIsMe').style='background-color:white;color:black;';
+				}else{
+					document.getElementById('theOnlyThingTheyFearIsMe').style='background-color:black;color:white;'
 				}
 			}
