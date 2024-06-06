@@ -858,17 +858,21 @@
 				if(document.getElementById('versionTitleToggle').innerHTML=='Hide'){
 					document.getElementById('titleVersion').style='display:none;';
 					document.getElementById('versionTitleToggle').innerHTML='Show';
-					document.getElementById('versionTitleToggle').style='background-color:black;color:white;';
+					document.getElementById('versionTitleToggle').style.background-color='black';
+					document.getElementById('versionTitleToggle').style.color='white';
 				}else{
 					document.getElementById('titleVersion').style='display:normal;';
 					document.getElementById('versionTitleToggle').innerHTML='Hide';
-					document.getElementById('versionTitleToggle').style='background-color:white;color:black;';
+					document.getElementById('versionTitleToggle').style.background-color='white';
+					document.getElementById('versionTitleToggle').style.color='black';
 				}
 			}
 			function wrokEternal(){
-				if(document.getElementById('theOnlyThingTheyFearIsMe').style=='background-color:black;color:white;'){
-					document.getElementById('theOnlyThingTheyFearIsMe').style='background-color:white;color:black;';
+				if(document.getElementById('theOnlyThingTheyFearIsMe').style.color=='white'){
+					document.getElementById('theOnlyThingTheyFearIsMe').style.background-color='white';
+					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
 				}else{
-					document.getElementById('theOnlyThingTheyFearIsMe').style='background-color:black;color:white;'
+					document.getElementById('theOnlyThingTheyFearIsMe').style.background-color='black';
+					document.getElementById('theOnlyThingTheyFearIsMe').style.color='white';
 				}
 			}
