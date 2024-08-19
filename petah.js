@@ -868,13 +868,13 @@
 				}
 			}
 			function wrokEternal(){
-				if(document.getElementById('theOnlyThingTheyFearIsMe').innerHTML=='No'){
-					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='white';
-					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
-					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NO';
-				}else{
+				if(document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor=='white'){
 					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='white';
+					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NO';
+				}else{
+					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='white';
+					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='No';
 				}
 			}
