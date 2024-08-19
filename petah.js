@@ -868,7 +868,7 @@
 				}
 			}
 			function wrokEternal(){
-				if(document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor=='white'){
+				if(document.getElementById('theOnlyThingTheyFearIsMe').style.color=='black'){
 					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='white';
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NO';
