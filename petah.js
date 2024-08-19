@@ -871,7 +871,7 @@
 				if(document.getElementById('theOnlyThingTheyFearIsMe').style.color=='black'){
 					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='white';
-					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NO';
+					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='NOO';
 				}else{
 					document.getElementById('theOnlyThingTheyFearIsMe').style.backgroundColor='white';
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
