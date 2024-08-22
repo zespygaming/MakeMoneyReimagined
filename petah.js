@@ -9,12 +9,34 @@
 					}else{
 						document.getElementById('affordWaterBottle').innerHTML='Cannot Afford';
 					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainWaterBottle').innerHTML=1;
+						break;
+						case 10:
+							document.getElementById('gainWaterBottle').innerHTML=1.1;
+						break;
+						case 20:
+							document.getElementById('gainWaterBottle').innerHTML=1.2;
+						break;
+					}
 				}
 				if(document.getElementById('affordCart').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=50){
 						document.getElementById('affordCart').innerHTML='Buy';
 					}else{
 						document.getElementById('affordCart').innerHTML='Cannot Afford';
+					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainCart').innerHTML=1;
+						break;
+						case 10:
+							document.getElementById('gainCart').innerHTML=1.1;
+						break;
+						case 20:
+							document.getElementById('gainCart').innerHTML=1.2;
+						break;
 					}
 				}
 				if(document.getElementById('affordHeadphone').innerHTML!='Owned'){
@@ -23,12 +45,34 @@
 					}else{
 						document.getElementById('affordHeadphone').innerHTML='Cannot Afford';
 					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainHeadphone').innerHTML=2;
+						break;
+						case 10:
+							document.getElementById('gainHeadphone').innerHTML=2.2;
+						break;
+						case 20:
+							document.getElementById('gainHeadphone').innerHTML=2.4;
+						break;
+					}
 				}
 				if(document.getElementById('affordShoes').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=500){
 						document.getElementById('affordShoes').innerHTML='Buy';
 					}else{
 						document.getElementById('affordShoes').innerHTML='Cannot Afford';
+					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainShoes').innerHTML=2;
+						break;
+						case 10:
+							document.getElementById('gainShoes').innerHTML=2.2;
+						break;
+						case 20:
+							document.getElementById('gainShoes').innerHTML=2.4;
+						break;
 					}
 				}
 				if(document.getElementById('affordPhone').innerHTML!='Owned'){
@@ -37,12 +81,34 @@
 					}else{
 						document.getElementById('affordPhone').innerHTML='Cannot Afford';
 					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainPhone').innerHTML=3;
+						break;
+						case 10:
+							document.getElementById('gainPhone').innerHTML=3.3;
+						break;
+						case 20:
+							document.getElementById('gainPhone').innerHTML=3.6;
+						break;
+					}
 				}
 				if(document.getElementById('affordWatch').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=4500){
 						document.getElementById('affordWatch').innerHTML='Buy';
 					}else{
 						document.getElementById('affordWatch').innerHTML='Cannot Afford';
+					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainWatch').innerHTML=3;
+						break;
+						case 10:
+							document.getElementById('gainWatch').innerHTML=3.3;
+						break;
+						case 20:
+							document.getElementById('gainWatch').innerHTML=3.6;
+						break;
 					}
 				}
 				if(document.getElementById('affordUsedCar').innerHTML!='Owned'){
@@ -51,12 +117,34 @@
 					}else{
 						document.getElementById('affordUsedCar').innerHTML='Cannot Afford';
 					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainUsedCar').innerHTML=4;
+						break;
+						case 10:
+							document.getElementById('gainUsedCar').innerHTML=4.4;
+						break;
+						case 20:
+							document.getElementById('gainUsedCar').innerHTML=4.8;
+						break;
+					}
 				}
 				if(document.getElementById('affordDecentCar').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=40000){
 						document.getElementById('affordDecentCar').innerHTML='Buy';
 					}else{
 						document.getElementById('affordDecentCar').innerHTML='Cannot Afford';
+					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainDecentCar').innerHTML=4;
+						break;
+						case 10:
+							document.getElementById('gainDecentCar').innerHTML=4.4;
+						break;
+						case 20:
+							document.getElementById('gainDecentCar').innerHTML=4.8;
+						break;
 					}
 				}
 				if(document.getElementById('affordHouse').innerHTML!='Owned'){
@@ -65,12 +153,34 @@
 					}else{
 						document.getElementById('affordHouse').innerHTML='Cannot Afford';
 					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainHouse').innerHTML=5;
+						break;
+						case 10:
+							document.getElementById('gainHouse').innerHTML=5.5;
+						break;
+						case 20:
+							document.getElementById('gainHouse').innerHTML=6;
+						break;
+					}
 				}
 				if(document.getElementById('affordFancyCar').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=250000){
 						document.getElementById('affordFancyCar').innerHTML='Buy';
 					}else{
 						document.getElementById('affordFancyCar').innerHTML='Cannot Afford';
+					}
+					switch(Number(document.getElementById('incomeUL').innerHTML)){
+						case 0:
+							document.getElementById('gainFancyCar').innerHTML=6;
+						break;
+						case 10:
+							document.getElementById('gainFancyCar').innerHTML=6.6;
+						break;
+						case 20:
+							document.getElementById('gainFancyCar').innerHTML=7.2;
+						break;
 					}
 				}
 
@@ -414,6 +524,7 @@
 						break;
 						case 10:
 							incomeItem1+=1.1;
+						break;
 						case 20:
 							incomeItem1+=1.2;
 						break;
@@ -436,6 +547,7 @@
 						break;
 						case 10:
 							incomeItem2+=1.1;
+						break;
 						case 20:
 							incomeItem2+=1.2;
 						break;
@@ -458,6 +570,7 @@
 						break;
 						case 10:
 							incomeItem3+=2.2;
+						break;
 						case 20:
 							incomeItem3+=2.4;
 						break;
@@ -480,6 +593,7 @@
 						break;
 						case 10:
 							incomeItem4+=2.2;
+						break;
 						case 20:
 							incomeItem4+=2.4;
 						break;
@@ -502,6 +616,7 @@
 						break;
 						case 10:
 							incomeItem5+=3.3;
+						break;
 						case 20:
 							incomeItem5+=3.6;
 						break;
@@ -524,6 +639,7 @@
 						break;
 						case 10:
 							incomeItem6+=3.3;
+						break;
 						case 20:
 							incomeItem6+=3.6;
 						break;
@@ -546,6 +662,7 @@
 						break;
 						case 10:
 							incomeItem7+=4.4;
+						break;
 						case 20:
 							incomeItem7+=4.8;
 						break;
@@ -568,6 +685,7 @@
 						break;
 						case 10:
 							incomeItem8+=4.4;
+						break;
 						case 20:
 							incomeItem8+=4.8;
 						break;
@@ -590,6 +708,7 @@
 						break;
 						case 10:
 							incomeItem9+=5.5;
+						break;
 						case 20:
 							incomeItem9+=6;
 						break;
@@ -612,6 +731,7 @@
 						break;
 						case 10:
 							incomeItem10+=6.6;
+						break;
 						case 20:
 							incomeItem10+=7.2;
 						break;
@@ -637,8 +757,8 @@
 						break;
 						case 10:
 							document.getElementById('trueMonee').innerHTML-=150000;
-							upgradeItem1=upgradeItem1/1.1;
-							upgradeItem1*=1.2
+							upgradeItem1/=1.1;
+							upgradeItem1*=1.2;
 							document.getElementById('incum').innerHTML=upgradeItem1;
 							document.getElementById('incomeUL').innerHTML=20;
 							document.getElementById('incomeUC').innerHTML='no.';
@@ -885,7 +1005,6 @@
 					document.getElementById('darkLight').style='background-color:white;color:black;';
 
 					document.body.style='background-color:lightgrey;';
-					document.getElementByClass('navBttn').style.color='black';
 
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -894,6 +1013,8 @@
 					document.getElementById('settingsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+
+					document.getElementByClass('navBttn').style.color='black';
 				}
 			}
 			function versionBelowTitle(){
