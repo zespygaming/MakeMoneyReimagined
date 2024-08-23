@@ -228,16 +228,16 @@
 				}
 				switch(document.getElementById('superPowerUL').innerHTML){
 					case 'x100':
-						if(document.getElementById('trueMonee').innerHTML>=45000){
+						if(document.getElementById('trueMonee').innerHTML>=35000){
 							document.getElementById('affordSuperPowerU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
 						}
 					break;
 					case 'x200':
-						document.getElementById('superPowerUC').innerHTML='100K';
+						document.getElementById('superPowerUC').innerHTML='80K';
 						document.getElementById('superPowerULN').innerHTML='x300';
-						if(document.getElementById('trueMonee').innerHTML>=100000){
+						if(document.getElementById('trueMonee').innerHTML>=80000){
 							document.getElementById('affordSuperPowerU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordSuperPowerU').innerHTML='Cannot Afford';
@@ -453,6 +453,7 @@
 				var mone=Number(document.getElementById('monee').innerHTML);
 				var truMone=Number(document.getElementById('trueMonee').innerHTML);
 				var incom=Number(document.getElementById('incum').innerHTML);
+				var truIncom=Number(document.getElementById('trueIncum').innerHTML);
 				var sClickChance;
 				var sClickPower;
 				var sClickReward;
@@ -470,15 +471,15 @@
 				switch(document.getElementById('superPowerUL').innerHTML){
 					case 'x100':
 						sClickPower='100';
-						sClickReward=100*incom;
+						sClickReward=100*truIncom;
 					break;
 					case 'x200':
 						sClickPower='200';
-						sClickReward=200*incom;
+						sClickReward=200*truIncom;
 					break;
 					case 'x300':
 						sClickPower='300';
-						sClickReward=300*incom;
+						sClickReward=300*truIncom;
 					break;
 				}
 
@@ -499,20 +500,36 @@
 					},2500);
 					document.getElementById('trueMonee').innerHTML=truMone+sClickReward;
 				}else{
-					document.getElementById('trueMonee').innerHTML=truMone+incom;
+					document.getElementById('trueMonee').innerHTML=truMone+truIncom;
 				}
 				convertMonee();
 			}
 			function convertMonee(){
 				var mone=Number(document.getElementById('monee').innerHTML);
 				var truMone=Number(document.getElementById('trueMonee').innerHTML);
+				var deciMone=Number(Math.round(truMone*10))/10;
 
-				document.getElementById('monee').innerHTML=Math.round(truMone);
+				if(truMone>=1000){
+					document.getElementById('monee').innerHTML=Math.round(truMone);
+				}else{
+					document.getElementById('monee').innerHTML=deciMone;
+				}
+			}
+			function convertIncum(){
+				var incom=Number(document.getElementById('incum').innerHTML);
+				var truIncom=Number(document.getElementById('trueIncum').innerHTML);
+				var deciIncom=Number(Math.round(truIncom*10))/10;
+
+				if(truIncom>=1000){
+					document.getElementById('incum').innerHTML=Math.round(truIncom);
+				}else{
+					document.getElementById('incum').innerHTML=deciIncom;
+				}
 			}
 		//SHOP
 		 //ITEM SHOP
 			function buyWaterBottle(){
-				var incomeItem1=Number(document.getElementById('incum').innerHTML);
+				var incomeItem1=Number(document.getElementById('trueIncum').innerHTML);
 				var incomeUp1=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordWaterBottle').innerHTML=='Buy'){
@@ -529,13 +546,14 @@
 							incomeItem1+=1.2;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem1;
+					document.getElementById('trueIncum').innerHTML=incomeItem1;
 					document.getElementById('affordWaterBottle').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyCart(){
-				var incomeItem2=Number(document.getElementById('incum').innerHTML);
+				var incomeItem2=Number(document.getElementById('trueIncum').innerHTML);
 				var incomeUp2=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordCart').innerHTML=='Buy'){
@@ -552,13 +570,14 @@
 							incomeItem2+=1.2;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem2;
+					document.getElementById('trueIncum').innerHTML=incomeItem2;
 					document.getElementById('affordCart').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyHeadphone(){
-			var incomeItem3=Number(document.getElementById('incum').innerHTML);
+			var incomeItem3=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp3=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordHeadphone').innerHTML=='Buy'){
@@ -575,13 +594,14 @@
 							incomeItem3+=2.4;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem3;
+					document.getElementById('trueIncum').innerHTML=incomeItem3;
 					document.getElementById('affordHeadphone').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyShoes(){
-			var incomeItem4=Number(document.getElementById('incum').innerHTML);
+			var incomeItem4=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp4=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordShoes').innerHTML=='Buy'){
@@ -598,13 +618,14 @@
 							incomeItem4+=2.4;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem4;
+					document.getElementById('trueIncum').innerHTML=incomeItem4;
 					document.getElementById('affordShoes').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyPhone(){
-			var incomeItem5=Number(document.getElementById('incum').innerHTML);
+			var incomeItem5=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp5=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordPhone').innerHTML=='Buy'){
@@ -621,13 +642,14 @@
 							incomeItem5+=3.6;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem5;
+					document.getElementById('trueIncum').innerHTML=incomeItem5;
 					document.getElementById('affordPhone').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyWatch(){
-			var incomeItem6=Number(document.getElementById('incum').innerHTML);
+			var incomeItem6=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp6=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordWatch').innerHTML=='Buy'){
@@ -644,13 +666,14 @@
 							incomeItem6+=3.6;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem6;
+					document.getElementById('trueIncum').innerHTML=incomeItem6;
 					document.getElementById('affordWatch').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyUsedCar(){
-			var incomeItem7=Number(document.getElementById('incum').innerHTML);
+			var incomeItem7=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp7=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordUsedCar').innerHTML=='Buy'){
@@ -667,13 +690,14 @@
 							incomeItem7+=4.8;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem7;
+					document.getElementById('trueIncum').innerHTML=incomeItem7;
 					document.getElementById('affordUsedCar').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyDecentCar(){
-			var incomeItem8=Number(document.getElementById('incum').innerHTML);
+			var incomeItem8=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp8=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordDecentCar').innerHTML=='Buy'){
@@ -690,13 +714,14 @@
 							incomeItem8+=4.8;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem8;
+					document.getElementById('trueIncum').innerHTML=incomeItem8;
 					document.getElementById('affordDecentCar').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyHouse(){
-			var incomeItem9=Number(document.getElementById('incum').innerHTML);
+			var incomeItem9=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp9=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordHouse').innerHTML=='Buy'){
@@ -713,13 +738,14 @@
 							incomeItem9+=6;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem9;
+					document.getElementById('trueIncum').innerHTML=incomeItem9;
 					document.getElementById('affordHouse').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 			function buyFancyCar(){
-			var incomeItem10=Number(document.getElementById('incum').innerHTML);
+			var incomeItem10=Number(document.getElementById('trueIncum').innerHTML);
 			var incomeUp10=Number(document.getElementById('incomeUL').innerHTML);
 
 				if(document.getElementById('affordFancyCar').innerHTML=='Buy'){
@@ -736,21 +762,22 @@
 							incomeItem10+=7.2;
 						break;
 					}
-					document.getElementById('incum').innerHTML=incomeItem10;
+					document.getElementById('trueIncum').innerHTML=incomeItem10;
 					document.getElementById('affordFancyCar').innerHTML='Owned';
+					convertIncum();
 					checkShopPrices();
 				}
 			}
 		 //UPGRADE SHOP
 			function upgradeIncome(){
-				var upgradeItem1=Number(document.getElementById('incum').innerHTML);
+				var upgradeItem1=Number(document.getElementById('trueIncum').innerHTML);
 
 				if(document.getElementById('affordIncomeU').innerHTML=='Buy'){
 					switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('trueMonee').innerHTML-=50000;
 							upgradeItem1*=1.1;
-							document.getElementById('incum').innerHTML=upgradeItem1;
+							document.getElementById('trueIncum').innerHTML=upgradeItem1;
 							document.getElementById('incomeUL').innerHTML=10;
 							document.getElementById('incomeUC').innerHTML='150K';
 							document.getElementById('incomeULN').innerHTML='20';
@@ -759,13 +786,14 @@
 							document.getElementById('trueMonee').innerHTML-=150000;
 							upgradeItem1/=1.1;
 							upgradeItem1*=1.2;
-							document.getElementById('incum').innerHTML=upgradeItem1;
+							document.getElementById('trueIncum').innerHTML=upgradeItem1;
 							document.getElementById('incomeUL').innerHTML=20;
 							document.getElementById('incomeUC').innerHTML='no.';
 							document.getElementById('incomeULN').innerHTML='no.';
 						break;
 					}
 					convertMonee();
+					convertIncum();
 					checkShopPrices();
 				}
 			}
@@ -773,13 +801,13 @@
 				if(document.getElementById('affordSuperPowerU').innerHTML=='Buy'){
 					switch(document.getElementById('superPowerUL').innerHTML){
 						case 'x100':
-							document.getElementById('trueMonee').innerHTML-=45000;
+							document.getElementById('trueMonee').innerHTML-=35000;
 							document.getElementById('superPowerUL').innerHTML='x200';
 							document.getElementById('superPowerUC').innerHTML='100K';
 							document.getElementById('superPowerULN').innerHTML='x300';
 						break;
 						case 'x200':
-							document.getElementById('trueMonee').innerHTML-=100000;
+							document.getElementById('trueMonee').innerHTML-=80000;
 							document.getElementById('superPowerUL').innerHTML='x300';
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';

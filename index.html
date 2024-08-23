@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Make Money Reimagined</h1>
-			<h6 id='titleVersion'>Beta 1.1.5</h6>
+			<h6 id='titleVersion'>Beta 1.1.9</h6>
 				<br><br><br>
 			<div id='nav'>
 				<button class='navBttn'id='moneyTab'type='button'onclick='moneyTab();'>Money</button>
@@ -23,8 +23,9 @@
 				<br><br><br>
 			<div class='displayer'id='moneyDisplayer'>
 				<h2>Money: $<span id='monee'>0</span></h2>
-				<h2 id='trueMonee'style='visibility:hidden;display:none;'>0</h2>
+				<h2 class='trueHolder'id='trueMonee'>0</h2>
 					<h3>Income: $<span id='incum'>1</span></h3>
+					<h3 class='trueHolder'id='trueIncum'>1</h3>
 						<h4 id='notifis'></h4>
 							<br>
 					<button id='wrok'type='button'onclick='gain();'onkeydown>Wrok</button>
@@ -54,7 +55,7 @@
 					<div class='upgradeDisplay'id='superUD'>
 						<h4><u><strong>Super Click Upgrade</strong></u></h4>
 							<button class='item'id='superChanceU'type='button'onclick='upgradeSuperChance();'>Super Click Chance Upgrade<br>Current Chance <span id='superChanceUL'>1/100K</span><br>Cost $<span id='superChanceUC'>35K</span> Boost to <span id='superChanceULN'>1/10K</span><br><span class='afford'id='affordSuperChanceU'>Cannot Afford</span></button>
-							<button class='item'id='superPowerU'type='button'onclick='upgradeSuperPower();'>Super Click Power Upgrade<br>Current Power <span id='superPowerUL'>x100</span><br>Cost $<span id='superPowerUC'>45K</span> Boost to <span id='superPowerULN'>x200</span><br><span class='afford'id='affordSuperPowerU'>Cannot Afford</span></button>
+							<button class='item'id='superPowerU'type='button'onclick='upgradeSuperPower();'>Super Click Power Upgrade<br>Current Power <span id='superPowerUL'>x100</span><br>Cost $<span id='superPowerUC'>35K</span> Boost to <span id='superPowerULN'>x200</span><br><span class='afford'id='affordSuperPowerU'>Cannot Afford</span></button>
 								<br>
 					</div>
 			</div>
@@ -81,7 +82,7 @@
 					<button type='button'id='darkLight'onclick='darkLightMode()'>Dark Mode</button>
 				<p><strong>Display Version Below Title:</strong></p>
 					<button type='button'id='versionTitleToggle'onclick='versionBelowTitle();'>Hide</button>
-				<p><strong>Correct misspelling on wrok button:</strong></p>
+				<p><strong>Correct "misspelling" on wrok button:</strong></p>
 					<button type='button'id='theOnlyThingTheyFearIsMe'onclick='wrokEternal();'>No</button>
 			</div>
 			<div class='displayer'id='versionsDisplayer'>
@@ -105,6 +106,7 @@
 				<p><strong>Beta 1.0.1:</strong><br>Lowered Super Click Chance Upgrade costs to 35K and 80K, respectively<br>Lowered Super Click Power Upgrade costs to 45K and 100K, respectively<br>Fixed bug where second income upgrade would still display cost as 300K sometimes<br>Added "option" to fix "misspelling" on the wrok button</p>
 				<p><strong>Beta 1.1:</strong><br><strong>Completely changed the way money amount is stored, may be buggy</strong><br>New system should fix bug of long decimals gained when income is a decimal<br>New system will help as a base for large numbers such as thousands and millions being rounded to K and M respectively<br>Fixed bug with various settings options not working completely<br>Shortened a few of the sarcastic casino messages, and added a super rare one for the top gambling <s>addicts</s> professionals</p>
 				<p><strong>Beta 1.1.5:</strong><br>Fixed bug where buying an item with 10% income bonus would give a lot more income than it should<br>Made item shop buttons show income gain based on income bonus level, e.g. if income bonus is at 20%, decent car will say it gives +4.8 income instead of 4<br>Hopefully finally fixed dark/light mode bug with navbar not updating immediately</p>
+				<p><strong>Beta 1.1.9:</strong><br><strong>Same changes that were made to money have also been applied to income, may be buggy</strong><br>Made money and income show 1 decimal place up to 1000 money/income<br>Changed Super Power upgrade costs from 45K and 100K to 35K and 80K, the same as Super Chance</p>
 			</div>
 			<div class='displayer'id='helpDisplayer'>
 				<p>Click the button, click more buttons that make the other button click better, use those<br>better clicks to click other buttons to make the effects<br> of the other other buttons better for the main button.<br><br>Confused? Good, so am I.</p>

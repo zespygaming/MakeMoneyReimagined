@@ -45,6 +45,10 @@
 			.displayer{
 				text-align:center;
 			}
+			.trueHolder{
+				visibility:hidden;
+				display:none;
+			}
 			#nav{
 				text-align:center;
 			}
