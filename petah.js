@@ -9,7 +9,8 @@
 					}else{
 						document.getElementById('affordWaterBottle').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainWaterBottle').innerHTML=1;
 						break;
@@ -19,7 +20,6 @@
 						case 20:
 							document.getElementById('gainWaterBottle').innerHTML=1.2;
 						break;
-					}
 				}
 				if(document.getElementById('affordCart').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=50){
@@ -27,7 +27,8 @@
 					}else{
 						document.getElementById('affordCart').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainCart').innerHTML=1;
 						break;
@@ -37,7 +38,6 @@
 						case 20:
 							document.getElementById('gainCart').innerHTML=1.2;
 						break;
-					}
 				}
 				if(document.getElementById('affordHeadphone').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=150){
@@ -45,7 +45,8 @@
 					}else{
 						document.getElementById('affordHeadphone').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainHeadphone').innerHTML=2;
 						break;
@@ -55,7 +56,6 @@
 						case 20:
 							document.getElementById('gainHeadphone').innerHTML=2.4;
 						break;
-					}
 				}
 				if(document.getElementById('affordShoes').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=500){
@@ -63,7 +63,8 @@
 					}else{
 						document.getElementById('affordShoes').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainShoes').innerHTML=2;
 						break;
@@ -73,7 +74,6 @@
 						case 20:
 							document.getElementById('gainShoes').innerHTML=2.4;
 						break;
-					}
 				}
 				if(document.getElementById('affordPhone').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=1750){
@@ -81,7 +81,8 @@
 					}else{
 						document.getElementById('affordPhone').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainPhone').innerHTML=3;
 						break;
@@ -91,7 +92,6 @@
 						case 20:
 							document.getElementById('gainPhone').innerHTML=3.6;
 						break;
-					}
 				}
 				if(document.getElementById('affordWatch').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=4500){
@@ -99,7 +99,8 @@
 					}else{
 						document.getElementById('affordWatch').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainWatch').innerHTML=3;
 						break;
@@ -109,7 +110,6 @@
 						case 20:
 							document.getElementById('gainWatch').innerHTML=3.6;
 						break;
-					}
 				}
 				if(document.getElementById('affordUsedCar').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=12000){
@@ -117,7 +117,8 @@
 					}else{
 						document.getElementById('affordUsedCar').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainUsedCar').innerHTML=4;
 						break;
@@ -127,7 +128,6 @@
 						case 20:
 							document.getElementById('gainUsedCar').innerHTML=4.8;
 						break;
-					}
 				}
 				if(document.getElementById('affordDecentCar').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=40000){
@@ -135,7 +135,8 @@
 					}else{
 						document.getElementById('affordDecentCar').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainDecentCar').innerHTML=4;
 						break;
@@ -145,7 +146,6 @@
 						case 20:
 							document.getElementById('gainDecentCar').innerHTML=4.8;
 						break;
-					}
 				}
 				if(document.getElementById('affordHouse').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=100000){
@@ -153,7 +153,8 @@
 					}else{
 						document.getElementById('affordHouse').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainHouse').innerHTML=5;
 						break;
@@ -163,7 +164,6 @@
 						case 20:
 							document.getElementById('gainHouse').innerHTML=6;
 						break;
-					}
 				}
 				if(document.getElementById('affordFancyCar').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=250000){
@@ -171,7 +171,8 @@
 					}else{
 						document.getElementById('affordFancyCar').innerHTML='Cannot Afford';
 					}
-					switch(Number(document.getElementById('incomeUL').innerHTML)){
+				}
+				switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
 							document.getElementById('gainFancyCar').innerHTML=6;
 						break;
@@ -181,7 +182,6 @@
 						case 20:
 							document.getElementById('gainFancyCar').innerHTML=7.2;
 						break;
-					}
 				}
 
 				switch(Number(document.getElementById('incomeUL').innerHTML)){
