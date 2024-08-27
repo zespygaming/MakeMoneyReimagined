@@ -9,13 +9,14 @@
 	</head>
 	<body>
 		<h1>Make Money Reimagined</h1>
-			<h6 id='titleVersion'>Beta 1.1.9</h6>
+			<h6 id='titleVersion'>Beta 1.2 TR1</h6>
 				<br><br><br>
 			<div id='nav'>
 				<button class='navBttn'id='moneyTab'type='button'onclick='moneyTab();'>Money</button>
 				<button class='navBttn'id='shopTab'type='button'onclick='shopTab();'>Shop</button>
 				<button class='navBttn'id='casinoTab'type='button'onclick='casinoTab();'>Casino</button>
 				<button class='navBttn'id='prestigeTab'type='button'onclick='prestigeTab();'>Prestige</button>
+				<button class='navBttn'id='achievementTab'type='button'onclick='achievementTab();'>Achievements</button>
 				<button class='navBttn'id='settingsTab'type='button'onclick='settingsTab();'>Settings</button>
 				<button class='navBttn'id='versionsTab'type='button'onclick='versionsTab();'>Versions</button>
 				<button class='navBttn'id='helpTab'type='button'onclick='helpTab();'>Help</button>
@@ -50,7 +51,7 @@
 				<h2 id='lois999'>Upgrade Shop</h2>
 					<div class='upgradeDisplay'id='incomeUD'>
 						<h4><u><strong>Income Upgrade</strong></u></h4>
-							<button class='item'id='incomeU'type='button'onclick='upgradeIncome();'>Income Upgrade<br>Current Boost <span id='incomeUL'>0</span>%<br>Cost $<span id='incomeUC'>50K</span> Boost to <span id='incomeULN'>10</span>%<br><span class='afford'id='affordIncomeU'>Cannot Afford</span></button>
+							<button class='item'id='incomeU'type='button'onclick='upgradeIncome();'>Income Upgrade<br>Current Boost <span id='incomeUL'>0</span>%<br>Cost $<span id='incomeUC'>30K</span> Boost to <span id='incomeULN'>10</span>%<br><span class='afford'id='affordIncomeU'>Cannot Afford</span></button>
 					</div>
 					<div class='upgradeDisplay'id='superUD'>
 						<h4><u><strong>Super Click Upgrade</strong></u></h4>
@@ -76,6 +77,20 @@
 			</div>
 			<div class='displayer'id='prestigeDisplayer'>
 				<p>Prestige (Coming Soon!)</p>
+			</div>
+			<div class='displayer'id='achievementDisplayer'>
+				<h2>Achievements Unlocked: <span id='achievementsGotten'>0</span>/8</h2>
+					<br>
+				<button class='achievement'id='achievement1Mil'type='button'disabled>Millionaire<br>Have 1 Million dollars<br><span id='achievementStatus1Mil'>Uncompleted</span></button>
+				<button class='achievement'id='achievementAllItem'type='button'disabled>Hoarder<br>Own every item<br><span id='achievementStatusAllItem'>Uncompleted</span></button>
+				<button class='achievement'id='achievementMaxUpgrade'type='button'disabled>Upgrades, people<br>Max out an upgrade<br><span id='achievementStatusMaxUpgrade'>Coming Soon</span></button>
+					<br>
+				<button class='achievement'id='achievementAllUpgrade'type='button'disabled>Upgrades!<br>Max out every upgrade<br><span id='achievementStatusAllUpgrade'>Coming Soon</span></button>
+				<button class='achievement'id='achievementClick100K'type='button'disabled>Autoclicker much?<br>Click 100K times<br><span id='achievementClick100K'>Coming Soon</span></button>
+				<button class='achievement'id='achievementSuperClick'type='button'disabled>Powerful<br>Get a super click<br><span id='achievementSuperClick'>Coming Soon</span></button>
+					<br>
+				<button class='achievement'id='achievement10KClick'type='button'disabled>Godlike<br>Get more than $10K in one click<br><span id='achievement10KClick'>Coming Soon</span></button>
+				<button class='achievement'id='achievementPathetic'type='button'disabled>Thy attempts are in vain<br><span id='sAchievementPathetic'>???</span><br><span id='achievementStatusPathetic'>Coming Soon</span></button>
 			</div>
 			<div class='displayer'id='settingsDisplayer'>
 				<p><strong>Dark/Light Mode:</strong></p>
@@ -104,9 +119,14 @@
 				<p><strong>Beta 1.0!:</strong><br><strong>Github port! Hooray! Beta time!<br>The game is now called Make Money Reimagined as I recently learnt the actual definition of "remastered"</strong><br>Nerfed cost of 20% income upgrade from 300K to 150K<br>Added super click upgrades, you can now increase the chances of getting a super click, as well as the reward super clicks give!<br>Added option to show or hide version number below the title<br>Made it so dark mode switch would now display what to switch to instead of what mode you're already on<br>e.g. if you're on light mode, it'll say dark mode instead of light mode<br>Fixed casino bug where amount you won was based on your income, not how much you bet, how was I so stupid to not realized this lmao<br>Added version categories<br>Doubled the amount of possible sarcastic messages the casino can say when you lose<br>Fixed bug where buying decent car would only charge you 15K instead of 40K<br>Made the help tab actually contain something</p>
 					<br>
 				<p><strong>Beta 1.0.1:</strong><br>Lowered Super Click Chance Upgrade costs to 35K and 80K, respectively<br>Lowered Super Click Power Upgrade costs to 45K and 100K, respectively<br>Fixed bug where second income upgrade would still display cost as 300K sometimes<br>Added "option" to fix "misspelling" on the wrok button</p>
+					<br>
 				<p><strong>Beta 1.1:</strong><br><strong>Completely changed the way money amount is stored, may be buggy</strong><br>New system should fix bug of long decimals gained when income is a decimal<br>New system will help as a base for large numbers such as thousands and millions being rounded to K and M respectively<br>Fixed bug with various settings options not working completely<br>Shortened a few of the sarcastic casino messages, and added a super rare one for the top gambling <s>addicts</s> professionals</p>
+					<br>
 				<p><strong>Beta 1.1.5:</strong><br>Fixed bug where buying an item with 10% income bonus would give a lot more income than it should<br>Made item shop buttons show income gain based on income bonus level, e.g. if income bonus is at 20%, decent car will say it gives +4.8 income instead of 4<br>Hopefully finally fixed dark/light mode bug with navbar not updating immediately</p>
+					<br>
 				<p><strong>Beta 1.1.9:</strong><br><strong>Same changes that were made to money have also been applied to income, may be buggy</strong><br>Made money and income show 1 decimal place up to 1000 money/income<br>Changed Super Power upgrade costs from 45K and 100K to 35K and 80K, the same as Super Chance</p>
+					<br>
+				<p><strong>Beta 1.2 TR1:</strong><br>Added achievements! There are currently 2, with 6 more planned and are rewarded for actually achieving something, so no easy ones<br>Lowered income upgrade cost to 30K and 90K, to add some more gameplay to a mostly bland part of the game</p>
 			</div>
 			<div class='displayer'id='helpDisplayer'>
 				<p>Click the button, click more buttons that make the other button click better, use those<br>better clicks to click other buttons to make the effects<br> of the other other buttons better for the main button.<br><br>Confused? Good, so am I.</p>

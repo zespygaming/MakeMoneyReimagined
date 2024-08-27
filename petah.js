@@ -186,16 +186,16 @@
 
 				switch(Number(document.getElementById('incomeUL').innerHTML)){
 					case 0:
-						if(document.getElementById('trueMonee').innerHTML>=50000){
+						if(document.getElementById('trueMonee').innerHTML>=30000){
 							document.getElementById('affordIncomeU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordIncomeU').innerHTML='Cannot Afford';
 						}
 					break;
 					case 10:
-						document.getElementById('incomeUC').innerHTML='150K';
+						document.getElementById('incomeUC').innerHTML='90K';
 						document.getElementById('incomeULN').innerHTML='20';
-						if(document.getElementById('trueMonee').innerHTML>=150000){
+						if(document.getElementById('trueMonee').innerHTML>=90000){
 							document.getElementById('affordIncomeU').innerHTML='Buy';
 						}else{
 							document.getElementById('affordIncomeU').innerHTML='Cannot Afford';
@@ -247,12 +247,17 @@
 						document.getElementById('affordSuperPowerU').innerHTML='Maxed Out!';
 					break;
 				}
+
+				if(document.getElementById('affordFancyCar').innerHTML=='Owned' && document.getElementById('affordHouse').innerHTML=='Owned' && document.getElementById('affordDecentCar').innerHTML=='Owned' && document.getElementById('affordWaterBottle').innerHTML=='Owned' && document.getElementById('affordCart').innerHTML=='Owned' && document.getElementById('affordHeadphone').innerHTML=='Owned'){
+					giveAchievementAllItem();
+				}
 			}
 			function moneyTab(){
 				document.getElementById('moneyDisplayer').style='display:block;';
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -262,6 +267,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -271,6 +277,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -285,6 +292,7 @@
 				document.getElementById('shopDisplayer').style='display:block;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -294,6 +302,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -303,6 +312,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -314,6 +324,7 @@
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:block;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -323,6 +334,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -332,6 +344,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -343,6 +356,7 @@
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:block;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -352,6 +366,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -361,6 +376,39 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='white';
+				}
+			}
+			function achievementTab(){
+				document.getElementById('moneyDisplayer').style='display:none;';
+				document.getElementById('shopDisplayer').style='display:none;';
+				document.getElementById('casinoDisplayer').style='display:none;';
+				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:block;';
+				document.getElementById('settingsDisplayer').style='display:none;';
+				document.getElementById('versionsDisplayer').style='display:none;';
+				document.getElementById('helpDisplayer').style='display:none;';
+
+				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:bold;';
+					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(130,130,130);font-weight:normal;';
+					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementByClass('navBttn').style.color='black';
+				}else{
+					document.getElementById('moneyTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -372,6 +420,7 @@
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:block;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -381,6 +430,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -389,6 +439,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -399,6 +450,7 @@
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:block;';
 				document.getElementById('helpDisplayer').style='display:none;';
@@ -408,6 +460,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -416,6 +469,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -426,6 +480,7 @@
 				document.getElementById('shopDisplayer').style='display:none;';
 				document.getElementById('casinoDisplayer').style='display:none;';
 				document.getElementById('prestigeDisplayer').style='display:none;';
+				document.getElementById('achievementDisplayer').style='display:none;';
 				document.getElementById('settingsDisplayer').style='display:none;';
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:block;';
@@ -435,6 +490,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(130,130,130);font-weight:bold;';
@@ -443,6 +499,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(110,110,110);font-weight:bold;';
@@ -505,14 +562,19 @@
 				convertMonee();
 			}
 			function convertMonee(){
-				var mone=Number(document.getElementById('monee').innerHTML);
 				var truMone=Number(document.getElementById('trueMonee').innerHTML);
 				var deciMone=Number(Math.round(truMone*10))/10;
 
-				if(truMone>=1000){
+				if(truMone>=10000){
 					document.getElementById('monee').innerHTML=Math.round(truMone);
 				}else{
 					document.getElementById('monee').innerHTML=deciMone;
+				}
+
+				var mone=Number(document.getElementById('monee').innerHTML);	
+
+				if(mone>=1000000){
+					giveAchievement1Mil();
 				}
 			}
 			function convertIncum(){
@@ -764,6 +826,7 @@
 					}
 					document.getElementById('trueIncum').innerHTML=incomeItem10;
 					document.getElementById('affordFancyCar').innerHTML='Owned';
+
 					convertIncum();
 					checkShopPrices();
 				}
@@ -775,15 +838,15 @@
 				if(document.getElementById('affordIncomeU').innerHTML=='Buy'){
 					switch(Number(document.getElementById('incomeUL').innerHTML)){
 						case 0:
-							document.getElementById('trueMonee').innerHTML-=50000;
+							document.getElementById('trueMonee').innerHTML-=30000;
 							upgradeItem1*=1.1;
 							document.getElementById('trueIncum').innerHTML=upgradeItem1;
 							document.getElementById('incomeUL').innerHTML=10;
-							document.getElementById('incomeUC').innerHTML='150K';
+							document.getElementById('incomeUC').innerHTML='90K';
 							document.getElementById('incomeULN').innerHTML='20';
 						break;
 						case 10:
-							document.getElementById('trueMonee').innerHTML-=150000;
+							document.getElementById('trueMonee').innerHTML-=90000;
 							upgradeItem1/=1.1;
 							upgradeItem1*=1.2;
 							document.getElementById('trueIncum').innerHTML=upgradeItem1;
@@ -1013,6 +1076,41 @@
 					setTimeout(function(){document.getElementById('casinoNotifi').innerHTML=''},3000);
 				}
 			}
+		//ACHIEVEMENTS
+			function giveAchievement1Mil(){
+				var achievementCount1=Number(document.getElementById('achievementsGotten').innerHTML);
+				
+				if(document.getElementById('achievement1Mil').disabled==true){
+					document.getElementById('achievement1Mil').disabled=false;
+					document.getElementById('achievementStatus1Mil').innerHTML='Completed';
+					achievementCount1++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount1;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
+			}
+			function giveAchievementAllItem(){
+				var achievementCount2=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementAllItem').disabled==true){
+					document.getElementById('achievementAllItem').disabled=false;
+					document.getElementById('achievementStatusAllItem').innerHTML='Completed';
+					achievementCount2++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount2;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
+			}
+			function giveAchievementMaxUpgrade(){
+			}
+			function giveAchievementAllUpgrade(){
+			}
+			function giveAchievementClick100K(){
+			}
+			function giveAchievementSuperClick(){
+			}
+			function giveAchievement10KClick(){
+			}
+			function giveAchievementPathetic(){
+			}
 		//SETTINGS
 			function darkLightMode(){
 				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
@@ -1025,6 +1123,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -1038,6 +1137,7 @@
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('settingsTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
