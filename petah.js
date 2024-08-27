@@ -394,21 +394,21 @@
 				document.getElementById('helpDisplayer').style='display:none;';
 
 				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
-					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:bold;';
+					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
-					document.getElementById('achievementTab').style='background-color:rgb(130,130,130);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementByClass('navBttn').style.color='black';
 				}else{
-					document.getElementById('moneyTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('moneyTab').style='background-color:rgb(110,110,110);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
-					document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:normal;';
+					document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -514,6 +514,7 @@
 				var sClickChance;
 				var sClickPower;
 				var sClickReward;
+				var cickCouter=Number(document.getElementById('clickCounter').innerHTML);
 				switch(document.getElementById('superChanceUL').innerHTML){
 					case '1/100K':
 						sClickChance='100000';
@@ -556,8 +557,17 @@
 						document.getElementById('notifis').innerHTML='';
 					},2500);
 					document.getElementById('trueMonee').innerHTML=truMone+sClickReward;
+					giveAchievementSuperClick();
+					if(sClickReward>=10000){
+						giveAchievement10KClick();
+					}
 				}else{
 					document.getElementById('trueMonee').innerHTML=truMone+truIncom;
+				}
+				cickCouter++;
+				document.getElementById('clickCounter').innerHTML=cickCouter;
+				if(cickCouter>=100000){
+					giveAchievementClick100K();
 				}
 				convertMonee();
 			}
@@ -853,6 +863,10 @@
 							document.getElementById('incomeUL').innerHTML=20;
 							document.getElementById('incomeUC').innerHTML='no.';
 							document.getElementById('incomeULN').innerHTML='no.';
+							giveAchievementMaxUpgrade();
+							if(document.getElementById('superPowerUL').innerHTML=='x300' && document.getElementById('superChanceUL').innerHTML=='1/5K'){
+								giveAchievementAllUpgrade();
+							}
 						break;
 					}
 					convertMonee();
@@ -874,6 +888,10 @@
 							document.getElementById('superPowerUL').innerHTML='x300';
 							document.getElementById('superPowerUC').innerHTML='no.';
 							document.getElementById('superPowerULN').innerHTML='no.';
+							giveAchievementMaxUpgrade();
+							if(Number(document.getElementById('incomeUL').innerHTML)==20 && document.getElementById('superChanceUL').innerHTML=='1/5K'){
+								giveAchievementAllUpgrade();
+							}
 						break;
 						default:
 							document.getElementById('lois999').innerHTML=p;
@@ -896,6 +914,10 @@
 							document.getElementById('superChanceUL').innerHTML='1/5K';
 							document.getElementById('superChanceUC').innerHTML='no.';
 							document.getElementById('superChanceULN').innerHTML='no.';
+							giveAchievementMaxUpgrade();
+							if(Number(document.getElementById('incomeUL').innerHTML)==20 && document.getElementById('superPowerUL').innerHTML=='x300'){
+								giveAchievementAllUpgrade();
+							}
 						break;
 						default:
 							document.getElementById('lois999').innerHTML='loiss';
@@ -1100,16 +1122,71 @@
 				}
 			}
 			function giveAchievementMaxUpgrade(){
+				var achievementCount3=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementMaxUpgrade').disabled==true){
+					document.getElementById('achievementMaxUpgrade').disabled=false;
+					document.getElementById('achievementStatusMaxUpgrade').innerHTML='Completed';
+					achievementCount3++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount3;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 			function giveAchievementAllUpgrade(){
+				var achievementCount4=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementAllUpgrade').disabled==true){
+					document.getElementById('achievementAllUpgrade').disabled=false;
+					document.getElementById('achievementStatusAllUpgrade').innerHTML='Completed';
+					achievementCount4++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount4;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 			function giveAchievementClick100K(){
+				var achievementCount5=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementClick100K').disabled==true){
+					document.getElementById('achievementClick100K').disabled=false;
+					document.getElementById('achievementStatusClick100K').innerHTML='Completed';
+					achievementCount5++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount5;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 			function giveAchievementSuperClick(){
+				var achievementCount6=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementSuperClick').disabled==true){
+					document.getElementById('achievementSuperClick').disabled=false;
+					document.getElementById('achievementStatusSuperClick').innerHTML='Completed';
+					achievementCount6++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount6;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 			function giveAchievement10KClick(){
+				var achievementCount7=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievement10KClick').disabled==true){
+					document.getElementById('achievement10KClick').disabled=false;
+					document.getElementById('achievementStatus10KClick').innerHTML='Completed';
+					achievementCount7++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount7;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 			function giveAchievementPathetic(){
+				var achievementCount8=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementPathetic').disabled==true){
+					document.getElementById('achievementPathetic').disabled=false;
+					document.getElementById('achievementStatusPathetic').innerHTML='Completed';
+					document.getElementById('sAchievementPathetic').innerHTML='Attempt to escape wroking';
+					achievementCount8++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount8;
+					document.getElementById('achievementTab').style='font-weight:bold;';
+				}
 			}
 		//SETTINGS
 			function darkLightMode(){
@@ -1168,4 +1245,5 @@
 					document.getElementById('theOnlyThingTheyFearIsMe').style.color='black';
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='No';
 				}
+				giveAchievementPathetic();
 			}
