@@ -286,8 +286,6 @@
 				convertMonee();
 			}
 			function shopTab(){
-				checkShopPrices();
-
 				document.getElementById('moneyDisplayer').style='display:none;';
 				document.getElementById('shopDisplayer').style='display:block;';
 				document.getElementById('casinoDisplayer').style='display:none;';
@@ -318,6 +316,7 @@
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementByClass('navBttn').style.color='white';
 				}
+				checkShopPrices();
 			}
 			function casinoTab(){
 				document.getElementById('moneyDisplayer').style='display:none;';
@@ -404,7 +403,7 @@
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementByClass('navBttn').style.color='black';
 				}else{
-					document.getElementById('moneyTab').style='background-color:rgb(110,110,110);font-weight:normal;';
+					document.getElementById('moneyTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
@@ -1107,7 +1106,11 @@
 					document.getElementById('achievementStatus1Mil').innerHTML='Completed';
 					achievementCount1++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount1;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementAllItem(){
@@ -1118,7 +1121,11 @@
 					document.getElementById('achievementStatusAllItem').innerHTML='Completed';
 					achievementCount2++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount2;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementMaxUpgrade(){
@@ -1129,7 +1136,11 @@
 					document.getElementById('achievementStatusMaxUpgrade').innerHTML='Completed';
 					achievementCount3++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount3;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementAllUpgrade(){
@@ -1140,7 +1151,11 @@
 					document.getElementById('achievementStatusAllUpgrade').innerHTML='Completed';
 					achievementCount4++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount4;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementClick100K(){
@@ -1151,7 +1166,11 @@
 					document.getElementById('achievementStatusClick100K').innerHTML='Completed';
 					achievementCount5++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount5;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementSuperClick(){
@@ -1162,7 +1181,11 @@
 					document.getElementById('achievementStatusSuperClick').innerHTML='Completed';
 					achievementCount6++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount6;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievement10KClick(){
@@ -1173,7 +1196,11 @@
 					document.getElementById('achievementStatus10KClick').innerHTML='Completed';
 					achievementCount7++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount7;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 			function giveAchievementPathetic(){
@@ -1185,7 +1212,11 @@
 					document.getElementById('sAchievementPathetic').innerHTML='Attempt to escape wroking';
 					achievementCount8++;
 					document.getElementById('achievementsGotten').innerHTML=achievementCount8;
-					document.getElementById('achievementTab').style='font-weight:bold;';
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
 				}
 			}
 		//SETTINGS

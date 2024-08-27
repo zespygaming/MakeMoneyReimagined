@@ -136,12 +136,13 @@
 				padding-top:10px;
 			}
 			.achievement{
-				background-color:rgba(25,25,28,0.05);
-				border:0.5px;
-				padding-left:25px;
-				padding-right:25px;
-				padding-top:8px;
-				padding-bottom:8px;
+				background-color:rgba(25,25,28,0.04);
+				border:0.2px solid black;
+				padding-left:11px;
+				padding-right:11px;
+				padding-top:9px;
+				padding-bottom:9px;
+				width:500px;
 			}
 			#darkLight,#versionTitleToggle,#theOnlyThingTheyFearIsMe{
 				padding:5px;
