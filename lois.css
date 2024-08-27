@@ -99,6 +99,9 @@
 			#helpDisplayer{
 				display:none;
 			}
+			#achievementDisplayer{
+				display:none;
+			}
 			.item{
 				border-radius:5.5px;
 				border:0.4px solid rgb(120,120,120);
