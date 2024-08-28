@@ -248,9 +248,9 @@
 					break;
 				}
 
-				/*if(document.getElementById('affordFancyCar').innerHTML=='Owned' && document.getElementById('affordHouse').innerHTML=='Owned' && document.getElementById('affordDecentCar').innerHTML=='Owned' && document.getElementById('affordWaterBottle').innerHTML=='Owned' && document.getElementById('affordCart').innerHTML=='Owned' && document.getElementById('affordHeadphone').innerHTML=='Owned'){
+				if(document.getElementById('affordFancyCar').innerHTML=='Owned' && document.getElementById('affordHouse').innerHTML=='Owned' && document.getElementById('affordDecentCar').innerHTML=='Owned' && document.getElementById('affordWaterBottle').innerHTML=='Owned' && document.getElementById('affordCart').innerHTML=='Owned' && document.getElementById('affordHeadphone').innerHTML=='Owned'){
 					giveAchievementAllItem();
-				}*/
+				}
 			}
 			function moneyTab(){
 				document.getElementById('moneyDisplayer').style='display:block;';
