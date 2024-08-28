@@ -580,9 +580,7 @@
 					document.getElementById('monee').innerHTML=deciMone;
 				}
 
-				var mone=Number(document.getElementById('monee').innerHTML);	
-
-				if(mone>=1000000){
+				if(Number(document.getElementById('monee').innerHTML)>=1000000){
 					giveAchievement1Mil();
 				}
 			}
