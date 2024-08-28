@@ -286,6 +286,8 @@
 				convertMonee();
 			}
 			function shopTab(){
+				checkShopPrices();
+
 				document.getElementById('moneyDisplayer').style='display:none;';
 				document.getElementById('shopDisplayer').style='display:block;';
 				document.getElementById('casinoDisplayer').style='display:none;';
@@ -316,7 +318,6 @@
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementByClass('navBttn').style.color='white';
 				}
-				checkShopPrices();
 			}
 			function casinoTab(){
 				document.getElementById('moneyDisplayer').style='display:none;';
