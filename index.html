@@ -9,14 +9,14 @@
 	</head>
 	<body>
 		<h1>Make Money Reimagined</h1>
-			<h6 id='titleVersion'>Beta 1.2</h6>
+			<h6 id='titleVersion'>Beta 1.2.1</h6>
 				<br><br><br>
 			<div id='nav'>
 				<button class='navBttn'id='moneyTab'type='button'onclick='moneyTab();'>Money</button>
 				<button class='navBttn'id='shopTab'type='button'onclick='shopTab();'>Shop</button>
 				<button class='navBttn'id='casinoTab'type='button'onclick='casinoTab();'>Casino</button>
 				<button class='navBttn'id='prestigeTab'type='button'onclick='prestigeTab();'>Prestige</button>
-				<button class='navBttn'id='achievementTab'type='button'onclick='achievementTab();'>Achievements</button>
+				<button class='navBttn'id='achievementTab'type='button'onclick='achievementTab();'><span id='achievementTab2'>Achievements</span><span id='achievementTabNotifi'></span></button>
 				<button class='navBttn'id='settingsTab'type='button'onclick='settingsTab();'>Settings</button>
 				<button class='navBttn'id='versionsTab'type='button'onclick='versionsTab();'>Versions</button>
 				<button class='navBttn'id='helpTab'type='button'onclick='helpTab();'>Help</button>
@@ -93,7 +93,7 @@
 					<br><br>
 				<button class='achievement'id='achievement10KClick'type='button'disabled><strong>Godlike</strong><br>Get more than $10K in one click<br><span id='achievement10KClick'>Uncompleted</span></button>
 				<button class='achievement'id='achievementPathetic'type='button'disabled><strong>Thy attempts are in vain</strong><br><span id='sAchievementPathetic'>???</span><br><span id='achievementStatusPathetic'>Uncompleted</span></button>
-					<br>
+					<br><br>
 			</div>
 			<div class='displayer'id='settingsDisplayer'>
 				<p><strong>Dark/Light Mode:</strong></p>
@@ -134,6 +134,7 @@
 					<br>
 				<p><strong>Beta 1.2:</strong><br>All 8 Achievements are here! There's more to do now! Y A Y<br>Fixed MANY bugs<br>Changed how achievement icons look<br>Decimals in money now show up until $10K<br><strong>IMPORTANT:</strong> Achievements are still WIP! There may be many bugs!</p>
 					<br>
+				<p><strong>Beta 1.2.1:</strong><br>Changed the achievement notifi to be much more noticeable<br>Mostly just bug fixes</p>
 			</div>
 			<div class='displayer'id='helpDisplayer'>
 				<p>Click the button, click more buttons that make the other button click better, use those<br>better clicks to click other buttons to make the effects<br> of the other other buttons better for the main button.<br><br>Confused? Good, so am I.</p>
