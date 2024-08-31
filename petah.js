@@ -440,6 +440,8 @@
 					document.getElementById('casinoTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					document.getElementById('achievementTab2').innerHTML='Achievements';
+					document.getElementById('achievementTabNotifi').innerHTML='';
 					document.getElementById('settingsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
