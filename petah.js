@@ -428,6 +428,8 @@
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('prestigeTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('achievementTab').style='background-color:rgb(130,130,130);font-weight:bold;';
+					document.getElementById('achievementTab2').innerHTML='Achievements';
+					document.getElementById('achievementTabNotifi').innerHTML='';
 					document.getElementById('settingsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('versionsTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -1164,7 +1166,7 @@
 					document.getElementById('achievementStatus1Mil').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1185,7 +1187,7 @@
 					document.getElementById('achievementStatusAllItem').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1206,7 +1208,7 @@
 					document.getElementById('achievementStatusMaxUpgrade').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1227,7 +1229,7 @@
 					document.getElementById('achievementStatusAllUpgrade').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1248,7 +1250,7 @@
 					document.getElementById('achievementStatusClick100K').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1269,7 +1271,7 @@
 					document.getElementById('achievementStatusSuperClick').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1290,7 +1292,7 @@
 					document.getElementById('achievementStatus10KClick').innerHTML='Completed';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
@@ -1312,7 +1314,7 @@
 					document.getElementById('sAchievementPathetic').innerHTML='Attempt to escape wroking';
 					document.getElementById('achievementTab2').innerHTML='Achievements +';
 					if(document.getElementById('achievementTabNotifi').innerHTML==''){
-						document.getElementById('achievementTabNotifi').innerHTML=0;
+						document.getElementById('achievementTabNotifi').innerHTML=1;
 					}else{
 						document.getElementById('achievementTabNotifi').innerHTML++;
 					}
