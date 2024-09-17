@@ -2,6 +2,7 @@
 			//document.getElementById('monee').innerHTML=localStorage.getItem('money');
 
 		//NAVBAR
+		/*REMINDER: HEALTH ARTICLE TING*/
 			function checkShopPrices(){
 				if(document.getElementById('affordWaterBottle').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=10){
@@ -618,7 +619,7 @@
 						document.getElementById('notifis').innerHTML='';
 					},2500);
 					document.getElementById('trueMonee').innerHTML=truMone+sClickReward;
-					giveAchievementSuperClick();
+					//giveAchievementSuperClick();
 					if(sClickReward>=10000){
 						giveAchievement10KClick();
 					}

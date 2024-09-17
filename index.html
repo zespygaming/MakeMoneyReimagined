@@ -51,11 +51,11 @@
 
 				<h2 id='lois999'>Upgrade Shop</h2>
 					<div class='upgradeDisplay'id='incomeUD'>
-						<h4><u><strong>Income Upgrade</strong></u></h4>
+						<h4><u><strong>Income Upgrades</strong></u></h4>
 							<button class='item'id='incomeU'type='button'onclick='upgradeIncome();'>Income Upgrade<br>Current Boost <span id='incomeUL'>0</span>%<br>Cost $<span id='incomeUC'>30K</span> Boost to <span id='incomeULN'>10</span>%<br><span class='afford'id='affordIncomeU'>Cannot Afford</span></button>
 					</div>
 					<div class='upgradeDisplay'id='superUD'>
-						<h4><u><strong>Super Click Upgrade</strong></u></h4>
+						<h4><u><strong>Super Click Upgrades</strong></u></h4>
 							<button class='item'id='superChanceU'type='button'onclick='upgradeSuperChance();'>Super Click Chance Upgrade<br>Current Chance <span id='superChanceUL'>1/100K</span><br>Cost $<span id='superChanceUC'>35K</span> Boost to <span id='superChanceULN'>1/10K</span><br><span class='afford'id='affordSuperChanceU'>Cannot Afford</span></button>
 							<button class='item'id='superPowerU'type='button'onclick='upgradeSuperPower();'>Super Click Power Upgrade<br>Current Power <span id='superPowerUL'>x100</span><br>Cost $<span id='superPowerUC'>35K</span> Boost to <span id='superPowerULN'>x200</span><br><span class='afford'id='affordSuperPowerU'>Cannot Afford</span></button>
 								<br>
@@ -81,7 +81,7 @@
 				<p>Prestige (Coming Soon!)</p>
 			</div>
 			<div class='displayer'id='achievementDisplayer'>
-				<h2>Achievements Unlocked: <span id='achievementsGotten'>0</span>/8</h2>
+				<h2>Achievements Unlocked: <span id='achievementsGotten'>0</span>/7</h2>
 					<br><br>
 				<button class='achievement'id='achievement1Mil'type='button'disabled><strong>Millionaire</strong><br>Have 1 Million dollars<br><span id='achievementStatus1Mil'>Uncompleted</span></button>
 				<button class='achievement'id='achievementAllItem'type='button'disabled><strong>Hoarder</strong><br>Own every item<br><span id='achievementStatusAllItem'>Uncompleted</span></button>
@@ -89,7 +89,7 @@
 					<br><br>
 				<button class='achievement'id='achievementAllUpgrade'type='button'disabled><strong>Upgrades!</strong><br>Max out every upgrade<br><span id='achievementStatusAllUpgrade'>Uncompleted</span></button>
 				<button class='achievement'id='achievementClick100K'type='button'disabled><strong>Autoclicker much?</strong><br>Click 100K times<br><span id='achievementClick100K'>Uncompleted</span></button>
-				<button class='achievement'id='achievementSuperClick'type='button'disabled><strong>Powerful</strong><br>Get a super click<br><span id='achievementSuperClick'>Uncompleted</span></button>
+				<button class='achievement'id='achievementSuperClick'type='button'disabled><strong>Powerful</strong><br>Get a super click<br><span id='achievementSuperClick'>Temporarily Unavailable</span></button>
 					<br><br>
 				<button class='achievement'id='achievement10KClick'type='button'disabled><strong>Godlike</strong><br>Get more than $10K in one click<br><span id='achievement10KClick'>Uncompleted</span></button>
 				<button class='achievement'id='achievementPathetic'type='button'disabled><strong>Thy attempts are in vain</strong><br><span id='sAchievementPathetic'>???</span><br><span id='achievementStatusPathetic'>Uncompleted</span></button>
@@ -135,6 +135,9 @@
 				<p><strong>Beta 1.2:</strong><br>All 8 Achievements are here! There's more to do now! Y A Y<br>Fixed MANY bugs<br>Changed how achievement icons look<br>Decimals in money now show up until $10K<br><strong>IMPORTANT:</strong> Achievements are still WIP! There may be many bugs!</p>
 					<br>
 				<p><strong>Beta 1.2.1:</strong><br>Changed the achievement notifi to be much more noticeable<br>Mostly just bug fixes</p>
+					<br>
+				<p><strong>Beta 1.2.2:</strong><br>Fixed bug where on startup, money tab icon wasn't properly darkened<br>Made super click achievement temporarily unavailable for bugtesting purposes<br>Made upgrade shop subheadings plural</p>
+					<br>
 			</div>
 			<div class='displayer'id='helpDisplayer'>
 				<p>Click the button, click more buttons that make the other button click better, use those<br>better clicks to click other buttons to make the effects<br> of the other other buttons better for the main button.<br><br>Confused? Good, so am I.</p>
