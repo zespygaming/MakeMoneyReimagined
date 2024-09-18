@@ -66,9 +66,6 @@
 				transition-duration:0.05s;
 				box-shadow:0 2px 0 0.5px rgb(100,100,100);
 			}
-			#nav .navBttn:not(#moneyTab){
-				background-color:rgb(150,150,150);
-			}
 			#nav .navBttn:hover{
 				box-shadow:0 2px 4px 0.8px rgb(85,85,85),0 2px 0 0.5px rgb(100,100,100);
 			}
