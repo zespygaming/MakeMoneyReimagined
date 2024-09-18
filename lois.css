@@ -52,7 +52,12 @@
 			#nav{
 				text-align:center;
 			}
+			#moneyTab{
+				background-color:rgb(130,130,130);
+				font-weight:bold;
+			}
 			#nav .navBttn{
+				background-color:rgb(150,150,150);
 				border:0.5px solid darkgray;
 				border-radius:8px;
 				color:black;
@@ -72,10 +77,6 @@
 			#nav .navBttn:active{
 				box-shadow:0 1.5px 0 0.5px rgb(90,90,90);
 				transform:translateY(1px);
-			}
-			#moneyTab{
-				background-color:rgb(130,130,130);
-				font-weight:bold;
 			}
 			#moneyDisplayer{
 				display:block;
