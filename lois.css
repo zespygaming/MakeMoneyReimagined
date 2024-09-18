@@ -52,7 +52,7 @@
 			#nav{
 				text-align:center;
 			}
-			#nav .navBttn{
+			#nav .navBttn not:(#moneyTab){
 				background-color:rgb(150,150,150);
 				border:0.5px solid darkgray;
 				border-radius:8px;
