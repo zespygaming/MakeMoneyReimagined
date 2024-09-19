@@ -53,7 +53,6 @@
 				text-align:center;
 			}
 			#nav .navBttn{
-				background-color:rgb(150,150,150);
 				border:0.5px solid darkgray;
 				border-radius:8px;
 				color:black;
@@ -70,6 +69,9 @@
 			#moneyTab{
 				background-color:rgb(130,130,130);
 				font-weight:bold;
+			}
+			#shopTab, #casinoTab, #prestigeTab, #achievementTab, #settingsTab, #versionsTab, #helpTab{
+				background-color:rgb(150,150,150);
 			}
 			#nav .navBttn:hover{
 				box-shadow:0 2px 4px 0.8px rgb(85,85,85),0 2px 0 0.5px rgb(100,100,100);
