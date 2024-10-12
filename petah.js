@@ -1834,7 +1834,7 @@
 					default:
 						document.getElementById('swearInstance1').innerHTML='f***king ';
 						document.getElementById('swearInstance2').innerHTML='s**t';
-						document.getElementById('swearToggle').innerHTML='Censor';
+						document.getElementById('swearToggle').innerHTML='censor';
 						document.getElementById('swearToggle').style.backgroundColor='rgb(127,127,127)';
 						document.getElementById('swearToggle').style.color='black';
 				}

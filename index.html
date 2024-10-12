@@ -47,7 +47,7 @@
 					<button class='item'id='decentCar'type='button'onclick='buyDecentCar();'>Decent Car<br>Cost $40K  Income +<span id='gainDecentCar'>4</span><br><span class='afford'id='affordDecentCar'>Cannot Afford</span></button>
 					<button class='item'id='house'type='button'onclick='buyHouse();'>House<br>Cost $100K  Income +<span id='gainHouse'>5</span><br><span class='afford'id='affordHouse'>Cannot Afford</span></button>
 					<button class='item'id='fancyCar'type='button'onclick='buyFancyCar();'>Fancy Car<br>Cost $250k  Income +<span id='gainFancyCar'>6</span><br><span class='afford'id='affordFancyCar'>Cannot Afford</span></button>
-						<br><br>
+						<br><br><br>
 
 				<h2 id='lois999'>Upgrade Shop</h2>
 					<div class='upgradeDisplay'id='incomeUD'>
@@ -60,12 +60,12 @@
 							<button class='item'id='superPowerU'type='button'onclick='upgradeSuperPower();'>Super Click Power Upgrade<br>Current Power <span id='superPowerUL'>x100</span><br>Cost $<span id='superPowerUC'>35K</span> Boost to <span id='superPowerULN'>x200</span><br><span class='afford'id='affordSuperPowerU'>Cannot Afford</span></button>
 								<br>
 					</div>
-						<br><br>
+						<br><br><br>
 				
 				<h2>Casino Shop</h2>
 					<div class='upgradeDisplay'id='casinoUD'>
-						<h4 id='casinoUpgradeDisplay'><strong>*New!*</strong><u><strong>Casino Upgrades</strong></u></h4>
-							<button class='item'id='casinoKit'type='button'onclick='buyCasinoKit();'>Casino Hijacking Kit<br>Cost $50k<br><span class='afford'id='affordCasinoKit'>Cannot Afford</span></button>
+						<h4 id='casinoUpgradeDisplay'><u><strong>*New!* Casino Upgrades</strong></u></h4>
+							<button class='item'id='casinoKit'type='button'onclick='buyCasinoKit();'>Casino Hijacking Kit<br>Cost $50k<br>Access to Casino Hijacking Kit<br><span class='afford'id='affordCasinoKit'>Cannot Afford</span></button>
 							<!--<button class='item'id='casinoKitNumU'type='button'onclick='upgradeCasinoKitNum();'disabled>Casino Hijacking Kit Range Upgrade<br>Current Level <span id='casinoKitNumUL'>1</span><br>Cost $<span id='casinoKitNumUC'>60K</span> Boost to <span id='casinoKitNumULN'>2</span><br><span class='afford'id='affordCasinoKitNumU'>Cannot Afford</span></button>
 							
 							<!DOCTYPE html>
@@ -179,8 +179,9 @@ function notafunction(){ //document.getElementById('casinoKitButton').style.poin
 					</table>
 						<br>
 					<input type='number'id='gambleAmount'>
-						<br>
+						<br><br>
 					<button id='activateSlots'type='button'onclick='gamble();'>Gamble</button>
+						<br>
 					<button id='casinoKitButton'type='button'onclick='openCasinoKit();'>Hijacking Kit</button>
 						<br>
 					<p id='casinoNotifi'></p>
@@ -222,7 +223,7 @@ function notafunction(){ //document.getElementById('casinoKitButton').style.poin
 					<br><br>
 				<button class='achievement'id='achievement10KClick'type='button'disabled><strong>Godlike</strong><br>Get more than $10K in one click<br><span id='achievementStatus10KClick'>Uncompleted</span></button>
 				<button class='achievement'id='achievementJackpot'type='button'disabled><strong>Jackpot!</strong><br>Get triple 7's in the casino while gambling at least 10 times your income<br><span id='achievementStatusJackpot'>Uncompleted</span></button>
-				<button class='achievement'id='achievementSeriously'type='button'disabled><strong>Are you <span id='swearInstance1'>f***ing <span>serious</strong><br>Gamble more than 100K and lose<br><span id='achievementStatusSeriously'>Uncompleted</span></button>
+				<button class='achievement'id='achievementSeriously'type='button'disabled><strong>Are you <span id='swearInstance1'>f***ing </span>serious</strong><br>Gamble more than 100K and lose<br><span id='achievementStatusSeriously'>Uncompleted</span></button>
 					<br><br>
 				<button class='achievement'id='achievementPathetic'type='button'disabled><strong>Thy attempts are in vain</strong><br><span id='sAchievementPathetic'>???</span><br><span id='achievementStatusPathetic'>Uncompleted</span></button>
 					<br><br>
