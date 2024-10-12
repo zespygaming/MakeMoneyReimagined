@@ -270,7 +270,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -313,7 +313,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(130,130,130);font-weight:bold;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -352,7 +352,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(130,130,130);font-weight:bold;';
@@ -391,7 +391,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -430,7 +430,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -469,7 +469,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -507,7 +507,7 @@
 				document.getElementById('versionsDisplayer').style='display:block;';
 				document.getElementById('helpDisplayer').style='display:none;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
@@ -545,7 +545,7 @@
 				document.getElementById('versionsDisplayer').style='display:none;';
 				document.getElementById('helpDisplayer').style='display:block;';
 
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
 					document.getElementById('moneyTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('shopTab').style='background-color:rgb(150,150,150);font-weight:normal;';
 					document.getElementById('casinoTab').style='background-color:rgb(150,150,150);font-weight:normal;';
