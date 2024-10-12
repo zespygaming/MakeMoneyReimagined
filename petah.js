@@ -2,7 +2,6 @@
 			//document.getElementById('monee').innerHTML=localStorage.getItem('money');
 
 		//NAVBAR
-		/*REMINDER: HEALTH ARTICLE TING*/
 			function checkShopPrices(){
 				if(document.getElementById('affordWaterBottle').innerHTML!='Owned'){
 					if(document.getElementById('trueMonee').innerHTML>=10){
@@ -247,6 +246,14 @@
 					case 'x300':
 						document.getElementById('affordSuperPowerU').innerHTML='Maxed Out!';
 					break;
+				}
+
+				if(document.getElementById('affordCasinoKit').innerHTML!='Owned'){
+					if(document.getElementById('trueMonee').innerHTML>=50000){
+						document.getElementById('affordCasinoKit').innerHTML='Buy';
+					}else{
+						document.getElementById('affordCasinoKit').innerHTML='Cannot Afford';
+					}
 				}
 
 				if(document.getElementById('affordFancyCar').innerHTML=='Owned' && document.getElementById('affordHouse').innerHTML=='Owned' && document.getElementById('affordDecentCar').innerHTML=='Owned' && document.getElementById('affordWaterBottle').innerHTML=='Owned' && document.getElementById('affordCart').innerHTML=='Owned' && document.getElementById('affordHeadphone').innerHTML=='Owned'){
@@ -619,7 +626,7 @@
 						document.getElementById('notifis').innerHTML='';
 					},2500);
 					document.getElementById('trueMonee').innerHTML=truMone+sClickReward;
-					//giveAchievementSuperClick();
+					giveAchievementSuperClick();
 					if(sClickReward>=10000){
 						giveAchievement10KClick();
 					}
@@ -988,7 +995,18 @@
 					checkShopPrices();
 				}
 			}
+		 //CASINO SHOP
+			function buyCasinoKit(){
+				if(document.getElementById('affordCasinoKit').innerHTML=='Buy'){
+					document.getElementById('trueMonee').innerHTML-=50000;
+					document.getElementById('casinoKitButton').style.display='block';
+					document.getElementById('affordCasinoKit').innerHTML='Owned';
+					convertMonee();
+					checkShopPrices();
+				}
+			}
 		//CASINO
+		 //SLOTS
 			function gamble(){
 				/*
 				Hey wait a minute, you're not a developer! Who the fuck said you could be here???
@@ -999,17 +1017,22 @@
 
 				Go on, allow a negative amount of money to be gambled or whatever.
 
-				You dirty rat.
+				You worthless cheater.
 				*/
 				var stakes=document.getElementById('gambleAmount').valueAsNumber;
+				var gIncum=Number(document.getElementById('trueIncum').innerHTML)*10;
 				var spareMone=Number(document.getElementById('trueMonee').innerHTML);
 				var cycle;
+				var specialNumber=Number(document.getElementById('trueCasinoNumber').innerHTML);
+				var specialEffect=Number(document.getElementById('trueCasinoEffect').innerHTML);
+
 				if(stakes>0){
 					if(stakes<=spareMone){
 						document.getElementById('trueMonee').innerHTML=spareMone-stakes;
 						convertMonee();
 						cycle=0;
 						document.getElementById('activateSlots').disabled=true;
+						document.getElementById('casinoKitButton').disabled=true;
 						const cycler1=setInterval(function(){
 							document.getElementById('casinoSlot1').innerHTML=Math.floor((Math.random()*7)+1);
 							document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*7)+1);
@@ -1017,18 +1040,81 @@
 							cycle+=1;
 							if(cycle==20){
 								clearInterval(cycler1);
-								switch(Math.floor(Math.random()*10)){
-									case 0:
-										document.getElementById('casinoSlot1').innerHTML=1;
-									break;
-									case 1:
-										document.getElementById('casinoSlot1').innerHTML=1;
-									break;
-									case 2:
-										document.getElementById('casinoSlot1').innerHTML=7;
-									break;
-									default:
-										document.getElementById('casinoSlot1').innerHTML=Math.floor((Math.random()*5)+2);
+								if(specialNumber>0 && specialEffect>0 && specialEffect<=2){
+									switch(specialEffect){
+										case 1:
+											switch(Math.floor(Math.random()*4)){
+												case 0:
+													document.getElementById('casinoSlot1').innerHTML=specialNumber;
+												break;
+												default:
+													switch(Math.floor(Math.random()*10)){
+														case 0:
+															document.getElementById('casinoSlot1').innerHTML=1;
+														break;
+														case 1:
+															document.getElementById('casinoSlot1').innerHTML=1;
+														break;
+														case 2:
+															document.getElementById('casinoSlot1').innerHTML=7;
+														break;
+														default:
+															var casinoKitCrew1_1=Math.floor((Math.random()*4)+2);
+															if(casinoKitCrew1_1>=specialNumber){
+																casinoKitCrew1_1++;
+															}
+															document.getElementById('casinoSlot1').innerHTML=casinoKitCrew1_1;
+															
+													}
+											}
+										break;
+										case 2:
+											switch(Math.floor(Math.random()*40)){
+												case 0:
+													document.getElementById('casinoSlot1').innerHTML=specialNumber;
+												break;
+												case 1:
+													document.getElementById('casinoSlot1').innerHTML=specialNumber;
+												break;
+												case 2:
+													document.getElementById('casinoSlot1').innerHTML=specialNumber;
+												break;
+												default:
+													switch(Math.floor(Math.random()*10)){
+														case 0:
+															document.getElementById('casinoSlot1').innerHTML=1;
+														break;
+														case 1:
+															document.getElementById('casinoSlot1').innerHTML=1;
+														break;
+														case 2:
+															document.getElementById('casinoSlot1').innerHTML=7;
+														break;
+														default:
+															var casinoKitCrew1_2=Math.floor((Math.random()*4)+2);
+															if(casinoKitCrew1_2>=specialNumber){
+																casinoKitCrew1_2++;
+															}
+															document.getElementById('casinoSlot1').innerHTML=casinoKitCrew1_2;
+															
+													}
+											}
+										break;
+									}
+								}else{
+									switch(Math.floor(Math.random()*10)){
+										case 0:
+											document.getElementById('casinoSlot1').innerHTML=1;
+										break;
+										case 1:
+											document.getElementById('casinoSlot1').innerHTML=1;
+										break;
+										case 2:
+											document.getElementById('casinoSlot1').innerHTML=7;
+										break;
+										default:
+											document.getElementById('casinoSlot1').innerHTML=Math.floor((Math.random()*5)+2);
+									}
 								}
 								cycle=0;
 								const cycler2=setInterval(function(){
@@ -1037,18 +1123,81 @@
 									cycle+=1;
 									if(cycle==20){
 										clearInterval(cycler2);
-										switch(Math.floor(Math.random()*10)){
-											case 0:
-												document.getElementById('casinoSlot2').innerHTML=1;
-											break;
-											case 1:
-												document.getElementById('casinoSlot2').innerHTML=1;
-											break;
-											case 2:
-												document.getElementById('casinoSlot2').innerHTML=7;
-											break;
-											default:
-												document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*5)+2);
+										if(specialNumber>0 && specialEffect>0 && specialEffect<=2){
+											switch(specialEffect){
+												case 1:
+													switch(Math.floor(Math.random()*4)){
+														case 0:
+															document.getElementById('casinoSlot2').innerHTML=specialNumber;
+														break;
+														default:
+															switch(Math.floor(Math.random()*10)){
+																case 0:
+																	document.getElementById('casinoSlot2').innerHTML=1;
+																break;
+																case 1:
+																	document.getElementById('casinoSlot2').innerHTML=1;
+																break;
+																case 2:
+																	document.getElementById('casinoSlot2').innerHTML=7;
+																break;
+																default:
+																	var casinoKitCrew2_1=Math.floor((Math.random()*4)+2);
+																	if(casinoKitCrew2_1>=specialNumber){
+																		casinoKitCrew2_1++;
+																	}
+																	document.getElementById('casinoSlot2').innerHTML=casinoKitCrew2_1;
+																	
+															}
+													}
+												break;
+												case 2:
+													switch(Math.floor(Math.random()*40)){
+														case 0:
+															document.getElementById('casinoSlot2').innerHTML=specialNumber;
+														break;
+														case 1:
+															document.getElementById('casinoSlot2').innerHTML=specialNumber;
+														break;
+														case 2:
+															document.getElementById('casinoSlot2').innerHTML=specialNumber;
+														break;
+														default:
+															switch(Math.floor(Math.random()*10)){
+																case 0:
+																	document.getElementById('casinoSlot2').innerHTML=1;
+																break;
+																case 1:
+																	document.getElementById('casinoSlot2').innerHTML=1;
+																break;
+																case 2:
+																	document.getElementById('casinoSlot2').innerHTML=7;
+																break;
+																default:
+																	var casinoKitCrew2_2=Math.floor((Math.random()*4)+2);
+																	if(casinoKitCrew2_2>=specialNumber){
+																		casinoKitCrew2_2++;
+																	}
+																	document.getElementById('casinoSlot2').innerHTML=casinoKitCrew2_2;
+																	
+															}
+													}
+												break;
+											}
+										}else{
+											switch(Math.floor(Math.random()*10)){
+												case 0:
+													document.getElementById('casinoSlot2').innerHTML=1;
+												break;
+												case 1:
+													document.getElementById('casinoSlot2').innerHTML=1;
+												break;
+												case 2:
+													document.getElementById('casinoSlot2').innerHTML=7;
+												break;
+												default:
+													document.getElementById('casinoSlot2').innerHTML=Math.floor((Math.random()*5)+2);
+											}
 										}
 										cycle=0;
 										const cycler3=setInterval(function(){
@@ -1056,18 +1205,81 @@
 											cycle+=1;
 											if(cycle==20){
 												clearInterval(cycler3);
-												switch(Math.floor(Math.random()*10)){
-													case 0:
-														document.getElementById('casinoSlot3').innerHTML=1;
-													break;
-													case 1:
-														document.getElementById('casinoSlot3').innerHTML=1;
-													break;
-													case 2:
-														document.getElementById('casinoSlot3').innerHTML=7;
-													break;
-													default:
-														document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*5)+2);
+												if(specialNumber>0 && specialEffect>0 && specialEffect<=2){
+													switch(specialEffect){
+														case 1:
+															switch(Math.floor(Math.random()*4)){
+																case 0:
+																	document.getElementById('casinoSlot3').innerHTML=specialNumber;
+																break;
+																default:
+																	switch(Math.floor(Math.random()*10)){
+																		case 0:
+																			document.getElementById('casinoSlot3').innerHTML=1;
+																		break;
+																		case 1:
+																			document.getElementById('casinoSlot3').innerHTML=1;
+																		break;
+																		case 2:
+																			document.getElementById('casinoSlot3').innerHTML=7;
+																		break;
+																		default:
+																			var casinoKitCrew3_1=Math.floor((Math.random()*4)+2);
+																			if(casinoKitCrew3_1>=specialNumber){
+																				casinoKitCrew3_1++;
+																			}
+																			document.getElementById('casinoSlot3').innerHTML=casinoKitCrew3_1;
+																			
+																	}
+															}
+														break;
+														case 2:
+															switch(Math.floor(Math.random()*40)){
+																case 0:
+																	document.getElementById('casinoSlot3').innerHTML=specialNumber;
+																break;
+																case 1:
+																	document.getElementById('casinoSlot3').innerHTML=specialNumber;
+																break;
+																case 2:
+																	document.getElementById('casinoSlot3').innerHTML=specialNumber;
+																break;
+																default:
+																	switch(Math.floor(Math.random()*10)){
+																		case 0:
+																			document.getElementById('casinoSlot3').innerHTML=1;
+																		break;
+																		case 1:
+																			document.getElementById('casinoSlot3').innerHTML=1;
+																		break;
+																		case 2:
+																			document.getElementById('casinoSlot3').innerHTML=7;
+																		break;
+																		default:
+																			var casinoKitCrew3_2=Math.floor((Math.random()*4)+2);
+																			if(casinoKitCrew3_2>=specialNumber){
+																				casinoKitCrew3_2++;
+																			}
+																			document.getElementById('casinoSlot3').innerHTML=casinoKitCrew3_2;
+																			
+																	}
+															}
+														break;
+													}
+												}else{
+													switch(Math.floor(Math.random()*10)){
+														case 0:
+															document.getElementById('casinoSlot3').innerHTML=1;
+														break;
+														case 1:
+															document.getElementById('casinoSlot3').innerHTML=1;
+														break;
+														case 2:
+															document.getElementById('casinoSlot3').innerHTML=7;
+														break;
+														default:
+															document.getElementById('casinoSlot3').innerHTML=Math.floor((Math.random()*5)+2);
+													}
 												}
 												var casinoResult1=Number(document.getElementById('casinoSlot1').innerHTML);
 												var casinoResult2=Number(document.getElementById('casinoSlot2').innerHTML);
@@ -1077,45 +1289,84 @@
 
 												if(casinoResult1==casinoResult2 && casinoResult2==casinoResult3){
 													if(casinoResult1==7){
-														document.getElementById('casinoNotifi').innerHTML='Jackpot!!<br>+$'+stakes*100;
+														document.getElementById('casinoNotifi').innerHTML='Jackpot!!<br>+$'+stakes*100+' (x100)';
 														spareMone+=Number(stakes*100);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
+														if(stakes>=gIncum){
+															giveAchievementJackpot();
+														}
 													}else if(casinoResult1==1){
-														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+stakes*10;
+														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+stakes*10+' (x10)';
 														spareMone+=Number(stakes*10);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}else{
-														document.getElementById('casinoNotifi').innerHTML='Tripleee<br>+$'+stakes*30;
+														switch(casinoResult1){
+															case 2:
+																document.getElementById('casinoNotifi').innerHTML='Triple 2\'s!<br>+$'+stakes*30+' (x30)';
+															break;
+															case 3:
+																document.getElementById('casinoNotifi').innerHTML='Triple 3\'s!<br>+$'+stakes*30+' (x30)';
+															break;
+															case 4:
+																document.getElementById('casinoNotifi').innerHTML='Triple 4\'s!<br>+$'+stakes*30+' (x30)';
+															break;
+															case 5:
+																document.getElementById('casinoNotifi').innerHTML='Triple 5\'s!<br>+$'+stakes*30+' (x30)';
+															break;
+															case 6:
+																document.getElementById('casinoNotifi').innerHTML='Triple 6\'s!<br>+$'+stakes*30+' (x30)';
+															break;
+															default:
+																document.getElementById('casinoNotifi').innerHTML='Tripleee<br>+$'+stakes*30+' (x30)';
+														}
 														spareMone+=Number(stakes*30);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}
 												}else if(casinoResult1==casinoResult2 || casinoResult2==casinoResult3){
 													if(casinoResult2==7){
-														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+stakes*50;
+														document.getElementById('casinoNotifi').innerHTML='Semi-Jackpot!<br>+$'+stakes*50+' (x50)';
 														spareMone+=Number(stakes*50);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}else if(casinoResult2==1){
-														document.getElementById('casinoNotifi').innerHTML='Minor Double<br>+$'+stakes*2;
+														document.getElementById('casinoNotifi').innerHTML='Minor Double<br>+$'+stakes*2+' (x2)';
 														spareMone+=Number(stakes*2);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}else{
-														document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+stakes*3;
+														switch(casinoResult1){
+															case 2:
+																document.getElementById('casinoNotifi').innerHTML='Double 2\'s<br>+$'+stakes*3+' (x3)';
+															break;
+															case 3:
+																document.getElementById('casinoNotifi').innerHTML='Double 3\'s!<br>+$'+stakes*3+' (x3)';
+															break;
+															case 4:
+																document.getElementById('casinoNotifi').innerHTML='Double 4\'s!<br>+$'+stakes*3+' (x3)';
+															break;
+															case 5:
+																document.getElementById('casinoNotifi').innerHTML='Double 5\'s!<br>+$'+stakes*3+' (x3)';
+															break;
+															case 6:
+																document.getElementById('casinoNotifi').innerHTML='Double 6\'s!<br>+$'+stakes*3+' (x3)';
+															break;
+															default:
+																document.getElementById('casinoNotifi').innerHTML='Doublee<br>+$'+stakes*3+' (x3)';
+														}
 														spareMone+=Number(stakes*3);
 														document.getElementById('trueMonee').innerHTML=spareMone;
-														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}
 												}else{
 													switch(Math.floor(Math.random()*1000)){
 														case 0:
-															document.getElementById('casinoNotifi').innerHTML='Congrats, you gambled so much you got a 0.1% death message';
+															document.getElementById('casinoNotifi').innerHTML='Congrats, you gambled so much you got a 0.1% loss message';
 														break;
 														default:
-															switch(Math.floor(Math.random()*8)){
+															switch(Math.floor(Math.random()*14)){
 																case 0:
 																	document.getElementById('casinoNotifi').innerHTML='You should probably stop wasting your money';
 																break;
@@ -1140,9 +1391,27 @@
 																case 7:
 																	document.getElementById('casinoNotifi').innerHTML='You lost! AHAHAHAHAHAHAHAHA!!!!';
 																break;
+																case 8:
+																	document.getElementById('casinoNotifi').innerHTML='Are ya winnin son?';
+																break;
+																case 9:
+																	document.getElementById('casinoNotifi').innerHTML='Gambling addiction is a myth made up by the government<br>to stop people from getting too rich';
+																break;
+																case 10:
+																	document.getElementById('casinoNotifi').innerHTML='https://www.youtube.com/watch?v=HMuYfScGpbE';
+																break;
+																case 11:
+																	document.getElementById('casinoNotifi').innerHTML='Keep it up, maybe you\'ll win around the time tf2 gets updated';
+																break;
+																case 12:
+																	document.getElementById('casinoNotifi').innerHTML='One More?';
+																break;
+																case 13:
+																	document.getElementById('casinoNotifi').innerHTML='An entire casino update, and you <strong>still</strong> can\'t win <span id=\'swearInstance2\'>s**t</span>';
+																break;
 															}
 													}
-													setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;},3000);
+													setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 												}
 												convertMonee();
 											}
@@ -1159,6 +1428,133 @@
 					document.getElementById('casinoNotifi').innerHTML='nice try buckaroo, but i patched that exploit';
 					setTimeout(function(){document.getElementById('casinoNotifi').innerHTML=''},3000);
 				}
+			}
+		 //KIT
+			function openCasinoKit(){
+				document.getElementById('casinoHijackKit').style.display='block';
+				document.getElementById('blurredBackground1').style.display='block';
+
+				document.getElementById('moneyDisplayer').style.pointerEvents='none';
+				document.getElementById('shopDisplayer').style.pointerEvents='none';
+				document.getElementById('casinoDisplayer').style.pointerEvents='none';
+				document.getElementById('prestigeDisplayer').style.pointerEvents='none';
+				document.getElementById('settingsDisplayer').style.pointerEvents='none';
+				document.getElementById('versionsDisplayer').style.pointerEvents='none';
+				document.getElementById('helpDisplayer').style.pointerEvents='none';
+				document.getElementById('achievementDisplayer').style.pointerEvents='none';
+
+				document.getElementById('casinoKitButton').style.pointerEvents='none';
+				document.getElementById('activateSlots').style.pointerEvents='none';
+			}
+			function closeCasinoKit(){
+				document.getElementById('casinoHijackKit').style.display='none';
+				document.getElementById('blurredBackground1').style.display='none';
+
+				document.getElementById('moneyDisplayer').style.pointerEvents='auto';
+				document.getElementById('shopDisplayer').style.pointerEvents='auto';
+				document.getElementById('casinoDisplayer').style.pointerEvents='auto';
+				document.getElementById('prestigeDisplayer').style.pointerEvents='auto';
+				document.getElementById('settingsDisplayer').style.pointerEvents='auto';
+				document.getElementById('versionsDisplayer').style.pointerEvents='auto';
+				document.getElementById('helpDisplayer').style.pointerEvents='auto';
+				document.getElementById('achievementDisplayer').style.pointerEvents='auto';
+
+				document.getElementById('casinoKitButton').style.pointerEvents='auto';
+				document.getElementById('activateSlots').style.pointerEvents='auto';
+			}
+			function casinoKitChooseNumber2(){
+				document.getElementById('casinoKitNumber2').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitNumber3').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber4').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber5').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber6').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitNumber2').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitNumber3').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber4').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber5').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber6').style.transform='translate(0,0)';
+				
+				document.getElementById('trueCasinoNumber').innerHTML=2;
+			}
+			function casinoKitChooseNumber3(){
+				document.getElementById('casinoKitNumber2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber3').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitNumber4').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber5').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber6').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitNumber2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber3').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitNumber4').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber5').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber6').style.transform='translate(0,0)';
+
+				document.getElementById('trueCasinoNumber').innerHTML=3;
+			}
+			function casinoKitChooseNumber4(){
+				document.getElementById('casinoKitNumber2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber3').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber4').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitNumber5').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber6').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitNumber2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber3').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber4').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitNumber5').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber6').style.transform='translate(0,0)';
+
+				document.getElementById('trueCasinoNumber').innerHTML=4;
+			}
+			function casinoKitChooseNumber5(){
+				document.getElementById('casinoKitNumber2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber3').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber4').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber5').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitNumber6').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitNumber2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber3').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber4').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber5').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitNumber6').style.transform='translate(0,0)';
+
+				document.getElementById('trueCasinoNumber').innerHTML=5;
+			}
+			function casinoKitChooseNumber6(){
+				document.getElementById('casinoKitNumber2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber3').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber4').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber5').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitNumber6').style.backgroundColor='#d0d0d0';
+				
+				document.getElementById('casinoKitNumber2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber3').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber4').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber5').style.transform='translate(0,0)';
+				document.getElementById('casinoKitNumber6').style.transform='translate(0,1px)';
+
+				document.getElementById('trueCasinoNumber').innerHTML=6;
+			}
+            
+            function casinoKitChooseEffect1(){
+				document.getElementById('casinoKitEffect1').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitEffect2').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitEffect1').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitEffect2').style.transform='translate(0,0)';
+
+				document.getElementById('trueCasinoEffect').innerHTML=1;
+			}
+			function casinoKitChooseEffect2(){
+				document.getElementById('casinoKitEffect1').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect2').style.backgroundColor='#d0d0d0';
+				
+				document.getElementById('casinoKitEffect1').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect2').style.transform='translate(0,1px)';
+
+				document.getElementById('trueCasinoEffect').innerHTML=2;
 			}
 		//ACHIEVEMENTS
 			function giveAchievement1Mil(){
@@ -1330,10 +1726,52 @@
 					}
 				}
 			}
+			function giveAchievementJackpot(){
+				var achievementCount9=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementJackpot').disabled==true){
+					document.getElementById('achievementJackpot').disabled=false;
+					document.getElementById('achievementStatusJackpot').innerHTML='Completed';
+					document.getElementById('achievementTab2').innerHTML='Achievements +';
+					if(document.getElementById('achievementTabNotifi').innerHTML==''){
+						document.getElementById('achievementTabNotifi').innerHTML=1;
+					}else{
+						document.getElementById('achievementTabNotifi').innerHTML++;
+					}
+					achievementCount9++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount9;
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
+				}
+			}
+			function giveAchievementSeriously(){
+				var achievementCount10=Number(document.getElementById('achievementsGotten').innerHTML);
+
+				if(document.getElementById('achievementSeriously').disabled==true){
+					document.getElementById('achievementSeriously').disabled=false;
+					document.getElementById('achievementStatusSeriously').innerHTML='Completed';
+					document.getElementById('achievementTab2').innerHTML='Achievements +';
+					if(document.getElementById('achievementTabNotifi').innerHTML==''){
+						document.getElementById('achievementTabNotifi').innerHTML=1;
+					}else{
+						document.getElementById('achievementTabNotifi').innerHTML++;
+					}
+					achievementCount10++;
+					document.getElementById('achievementsGotten').innerHTML=achievementCount10;
+					if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
+						document.getElementById('achievementTab').style='font-weight:bold;';
+					}else{
+						document.getElementById('achievementTab').style='background-color:rgb(110,110,110);font-weight:bold;';
+					}
+				}
+			}
 		//SETTINGS
 			function darkLightMode(){
-				if(document.getElementById('darkLight').innerHTML=='Dark Mode'){
-					document.getElementById('darkLight').innerHTML='Light Mode';
+				if(document.getElementById('darkLight').innerHTML=='Light Mode'){
+					document.getElementById('darkLight').innerHTML='Dark Mode';
 					document.getElementById('darkLight').style='background-color:black;color:white;';
 
 					document.body.style='background-color:rgb(80,80,80);';
@@ -1347,7 +1785,7 @@
 					document.getElementById('versionsTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 					document.getElementById('helpTab').style='background-color:rgb(70,70,70);font-weight:normal;';
 				}else{
-					document.getElementById('darkLight').innerHTML='Dark Mode';
+					document.getElementById('darkLight').innerHTML='Light Mode';
 					document.getElementById('darkLight').style='background-color:white;color:black;';
 
 					document.body.style='background-color:lightgrey;';
@@ -1365,16 +1803,40 @@
 				}
 			}
 			function versionBelowTitle(){
-				if(document.getElementById('versionTitleToggle').innerHTML=='Hide'){
+				if(document.getElementById('versionTitleToggle').innerHTML=='Show'){
 					document.getElementById('titleVersion').style='display:none;';
-					document.getElementById('versionTitleToggle').innerHTML='Show';
+					document.getElementById('versionTitleToggle').innerHTML='Hide';
 					document.getElementById('versionTitleToggle').style.backgroundColor='black';
 					document.getElementById('versionTitleToggle').style.color='white';
 				}else{
 					document.getElementById('titleVersion').style='display:normal;';
-					document.getElementById('versionTitleToggle').innerHTML='Hide';
+					document.getElementById('versionTitleToggle').innerHTML='Show';
 					document.getElementById('versionTitleToggle').style.backgroundColor='white';
 					document.getElementById('versionTitleToggle').style.color='black';
+				}
+			}
+			function naughtyWordToggle(){
+				switch(document.getElementById('swearToggle').innerHTML){
+					case 'Censor':
+						document.getElementById('swearInstance1').innerHTML='';
+						document.getElementById('swearInstance2').innerHTML='';
+						document.getElementById('swearToggle').innerHTML='Hide';
+						document.getElementById('swearToggle').style.backgroundColor='black';
+						document.getElementById('swearToggle').style.color='white';
+					break;
+					case 'Hide':
+						document.getElementById('swearInstance1').innerHTML='fucking ';
+						document.getElementById('swearInstance2').innerHTML='shit';
+						document.getElementById('swearToggle').innerHTML='Show';
+						document.getElementById('swearToggle').style.backgroundColor='white';
+						document.getElementById('swearToggle').style.color='black';
+					break;
+					default:
+						document.getElementById('swearInstance1').innerHTML='f***king ';
+						document.getElementById('swearInstance2').innerHTML='s**t';
+						document.getElementById('swearToggle').innerHTML='Censor';
+						document.getElementById('swearToggle').style.backgroundColor='rgb(127,127,127)';
+						document.getElementById('swearToggle').style.color='black';
 				}
 			}
 			function wrokEternal(){

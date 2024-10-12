@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Make Money Reimagined</h1>
-			<h6 id='titleVersion'>Beta 1.2.2</h6>
+			<h6 id='titleVersion'>Beta 1.3</h6>
 				<br><br><br>
 			<div id='nav'>
 				<button class='navBttn'id='moneyTab'type='button'onclick='moneyTab();'>Money</button>
@@ -60,6 +60,112 @@
 							<button class='item'id='superPowerU'type='button'onclick='upgradeSuperPower();'>Super Click Power Upgrade<br>Current Power <span id='superPowerUL'>x100</span><br>Cost $<span id='superPowerUC'>35K</span> Boost to <span id='superPowerULN'>x200</span><br><span class='afford'id='affordSuperPowerU'>Cannot Afford</span></button>
 								<br>
 					</div>
+						<br><br>
+				
+				<h2>Casino Shop</h2>
+					<div class='upgradeDisplay'id='casinoUD'>
+						<h4 id='casinoUpgradeDisplay'><strong>*New!*</strong><u><strong>Casino Upgrades</strong></u></h4>
+							<button class='item'id='casinoKit'type='button'onclick='buyCasinoKit();'>Casino Hijacking Kit<br>Cost $50k<br><span class='afford'id='affordCasinoKit'>Cannot Afford</span></button>
+							<!--<button class='item'id='casinoKitNumU'type='button'onclick='upgradeCasinoKitNum();'disabled>Casino Hijacking Kit Range Upgrade<br>Current Level <span id='casinoKitNumUL'>1</span><br>Cost $<span id='casinoKitNumUC'>60K</span> Boost to <span id='casinoKitNumULN'>2</span><br><span class='afford'id='affordCasinoKitNumU'>Cannot Afford</span></button>
+							
+							<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+#casinoHijackKit{
+text-align:center;
+display:none;
+position:absolute;
+width:56%;
+height:55%;
+border-radius:10px;
+border:5.5px outset rgba(15,15,16,0.7);
+background-color:rgb(195,195,250);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+#blurredBackground1{
+position:absolute;
+background-color:rgba(0,0,0,0.35);
+display:none;
+min-width:100%;
+min-height:100%;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+backdrop-filter:blur(0.06rem);
+}
+            #casinoKitButton{
+            cursor:pointer;
+            }
+.btn-group button {
+  height:35px;
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  border: 1px solid black;
+  text-align:center;
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+#y button{
+	width:23px;
+}
+#n button{
+	width:23px;
+}
+#y{
+padding-left:50%;
+transform:translate(-57.5px,0px);
+}
+#n{
+padding-left:50%;
+transform:translate(-57.5px,0px);
+}
+</style>
+<script>
+function notafunction(){ //document.getElementById('casinoKitButton').style.pointerEvents='none';
+    document.getElementById('blurredBackground1').style.display='block';
+    document.getElementById('casinoHijackKit').style.display='block';
+    }
+</script>
+</head>
+<body>
+<button id='casinoKitButton'type='button'onclick='notafunction();'>Hijacking Kit</button>
+<div id='blurredBackground1'></div>
+<div id='casinoHijackKit'>
+<h5 style='text-align:center;font-size:1.7em;margin-top:5px;margin-bottom:10px;'>Casino Hijacker 9000</h5>
+<p style='text-align:center;'>The greatest way to make the rich boys pay!<br>To use, simply choose a number and its effects!</p>
+                    <div class='btn-group'id='y'>
+                        <button id='casinoKitNumber2'type='button'style='float:left;border-right: none;'>2</button>
+                            <button id='casinoKitNumber3'type='button'style='float:left;border-right: none;'>3</button>
+                            <button id='casinoKitNumber4'type='button'style='float:left;border-right: none;'>4</button>
+                            <button id='casinoKitNumber5'type='button'style='float:left;border-right: none;'>5</button>
+                            <button id='casinoKitNumber6'type='button'style='float:left;'>6</button>
+</div>
+	<br><br>
+  					<div class='btn-group'id='n'>
+                        <button id='casinoKitEffect1'type='button'style='float:left;border-right: none;'>1/2 Chance</button>
+                            <button id='casinoKitEffect2'type='button'style='float:left;'>2x Chance</button>
+</div>
+                        <br>
+
+</div>
+</body>
+</html>
+
+							-->
+					</div>
 					<br>
 			</div>
 			<div class='displayer'id='casinoDisplayer'>
@@ -72,34 +178,62 @@
 						</tr>
 					</table>
 						<br>
+					<input type='number'id='gambleAmount'>
+						<br>
 					<button id='activateSlots'type='button'onclick='gamble();'>Gamble</button>
+					<button id='casinoKitButton'type='button'onclick='openCasinoKit();'>Hijacking Kit</button>
 						<br>
 					<p id='casinoNotifi'></p>
-					<input type='number'id='gambleAmount'>
+						<br>
+					<p class='trueHolder'><span id='trueCasinoNumber'>0</span><span id='trueCasinoEffect'>0</span></p>
+			</div>
+			<div id='blurredBackground1'></div>
+			<div id='casinoHijackKit'>
+				<h5 style='text-align:center;font-size:1.7em;margin-top:5px;margin-bottom:10px;'>Casino Hijacker 9000</h5>
+					<p style='text-align:center;'>The greatest way to make the rich boys pay!<br>To use, simply choose a number and its effects!</p>
+						<div class='casinoKitGroup'id='casinoKitGroupNumber'>
+                        	<button id='casinoKitNumber2'type='button'style='float:left;border-right:none;'onclick='casinoKitChooseNumber2();'>2</button>
+                            <button id='casinoKitNumber3'type='button'style='float:left;border-right:none;'onclick='casinoKitChooseNumber3();'>3</button>
+                            <button id='casinoKitNumber4'type='button'style='float:left;border-right:none;'onclick='casinoKitChooseNumber4();'>4</button>
+                            <button id='casinoKitNumber5'type='button'style='float:left;border-right:none;'onclick='casinoKitChooseNumber5();'>5</button>
+                            <button id='casinoKitNumber6'type='button'style='float:left;'onclick='casinoKitChooseNumber6();'>6</button>
+						</div>
+							<br>
+  						<div class='casinoKitGroup'id='casinoKitGroupEffect'>
+                      		<button id='casinoKitEffect1'type='button'style='float:left;border-right:none;'onclick='casinoKitChooseEffect1();'>1/2 Chance</button>
+                        	<button id='casinoKitEffect2'type='button'style='float:left;'onclick='casinoKitChooseEffect2();'>2x Chance</button>
+						</div>
+						<button id='casinoKitButton2'type='button'onclick='closeCasinoKit();'>Exit</button>
+
 			</div>
 			<div class='displayer'id='prestigeDisplayer'>
 				<p>Prestige (Coming Soon!)</p>
 			</div>
 			<div class='displayer'id='achievementDisplayer'>
-				<h2>Achievements Unlocked: <span id='achievementsGotten'>0</span>/7</h2>
+				<h2>Achievements Unlocked: <span id='achievementsGotten'>0</span>/10</h2>
 					<br><br>
 				<button class='achievement'id='achievement1Mil'type='button'disabled><strong>Millionaire</strong><br>Have 1 Million dollars<br><span id='achievementStatus1Mil'>Uncompleted</span></button>
 				<button class='achievement'id='achievementAllItem'type='button'disabled><strong>Hoarder</strong><br>Own every item<br><span id='achievementStatusAllItem'>Uncompleted</span></button>
 				<button class='achievement'id='achievementMaxUpgrade'type='button'disabled><strong>Upgrades, people</strong><br>Max out an upgrade<br><span id='achievementStatusMaxUpgrade'>Uncompleted</span></button>
 					<br><br>
 				<button class='achievement'id='achievementAllUpgrade'type='button'disabled><strong>Upgrades!</strong><br>Max out every upgrade<br><span id='achievementStatusAllUpgrade'>Uncompleted</span></button>
-				<button class='achievement'id='achievementClick100K'type='button'disabled><strong>Autoclicker much?</strong><br>Click 100K times<br><span id='achievementClick100K'>Uncompleted</span></button>
-				<button class='achievement'id='achievementSuperClick'type='button'disabled><strong>Powerful</strong><br>Get a super click<br><span id='achievementSuperClick'>Temporarily Unavailable</span></button>
+				<button class='achievement'id='achievementClick100K'type='button'disabled><strong>Autoclicker much?</strong><br>Click 100K times<br><span id='achievementStatusClick100K'>Uncompleted</span></button>
+				<button class='achievement'id='achievementSuperClick'type='button'disabled><strong>Powerful</strong><br>Get a super click<br><span id='achievementStatusSuperClick'>Uncompleted</span></button>
 					<br><br>
-				<button class='achievement'id='achievement10KClick'type='button'disabled><strong>Godlike</strong><br>Get more than $10K in one click<br><span id='achievement10KClick'>Uncompleted</span></button>
+				<button class='achievement'id='achievement10KClick'type='button'disabled><strong>Godlike</strong><br>Get more than $10K in one click<br><span id='achievementStatus10KClick'>Uncompleted</span></button>
+				<button class='achievement'id='achievementJackpot'type='button'disabled><strong>Jackpot!</strong><br>Get triple 7's in the casino while gambling at least 10 times your income<br><span id='achievementStatusJackpot'>Uncompleted</span></button>
+				<button class='achievement'id='achievementSeriously'type='button'disabled><strong>Are you <span id='swearInstance1'>f***ing <span>serious</strong><br>Gamble more than 100K and lose<br><span id='achievementStatusSeriously'>Uncompleted</span></button>
+					<br><br>
 				<button class='achievement'id='achievementPathetic'type='button'disabled><strong>Thy attempts are in vain</strong><br><span id='sAchievementPathetic'>???</span><br><span id='achievementStatusPathetic'>Uncompleted</span></button>
 					<br><br>
 			</div>
 			<div class='displayer'id='settingsDisplayer'>
 				<p><strong>Dark/Light Mode:</strong></p>
-					<button type='button'id='darkLight'onclick='darkLightMode()'>Dark Mode</button>
+					<button type='button'id='darkLight'onclick='darkLightMode();'>Light Mode</button>
 				<p><strong>Display Version Below Title:</strong></p>
-					<button type='button'id='versionTitleToggle'onclick='versionBelowTitle();'>Hide</button>
+					<button type='button'id='versionTitleToggle'onclick='versionBelowTitle();'>Show</button>
+				<p><strong>Swearing:</strong></p>
+					<button type='button'id='swearToggle'onclick='naughtyWordToggle();'>Censor</button>
 				<p><strong>Correct "misspelling" on wrok button:</strong></p>
 					<button type='button'id='theOnlyThingTheyFearIsMe'onclick='wrokEternal();'>No</button>
 					<br>
@@ -137,6 +271,8 @@
 				<p><strong>Beta 1.2.1:</strong><br>Changed the achievement notifi to be much more noticeable<br>Mostly just bug fixes</p>
 					<br>
 				<p><strong>Beta 1.2.2:</strong><br>Fixed bug where on startup, money tab icon wasn't properly darkened<br>Made super click achievement temporarily unavailable for bugtesting purposes<br>Made upgrade shop subheadings plural</p>
+					<br>
+				<p><strong>Beta 1.3:</strong><br><strong>omg omg casino update finally here</strong><br>Added a new shop section, The Casino Shop! The main focus being...<br><strong>The Casino Hijacking Kit</strong>, an upgrade that lets you manipulate the slot machine! Buy it and screw over those greedy vegas pigs!<br>Added 2 new casino related achievements<br>Changed casino win messages to help avoid confusion as to how much money was won<br>Fixed bug where super clicks don't existing<br>Super click achievement is back!<br>Added setting to censor swearing due to one of the new achievement names<br>Changed settings to go back to showing what you're currently on<br>Made gamble button turn cursor into pointer<br>Added 6 new unique casino loss messages</p>
 					<br>
 			</div>
 			<div class='displayer'id='helpDisplayer'>

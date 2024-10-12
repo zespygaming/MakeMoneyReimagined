@@ -152,8 +152,81 @@
 				color:black;
 				border-radius:7px;
 			}
+			#swearToggle{
+				padding:5px;
+				background-color:rgb(127,127,127);
+				color:black;
+				border-radius:7px;
+			}
 			.upgradeDisplay{
 				margin:auto;
 				width:760px;
 				text-align:left;
+			}
+			#casinoHijackKit{
+				text-align:center;
+				display:none;
+				position:absolute;
+				width:56%;
+				height:55%;
+				border-radius:10px;
+				border:5.5px outset rgba(15,15,16,0.7);
+				background-color:rgb(195,195,250);
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+			}
+			#blurredBackground1{
+				position:absolute;
+				background-color:rgba(0,0,0,0.35);
+				display:none;
+				min-width:100%;
+				min-height:100%;
+				top:50%;
+				left:50%;
+				transform:translate(-50%,-50%);
+				backdrop-filter:blur(0.06rem);
+			}
+			#casinoKitButton{
+				display:none;
+				cursor:pointer;
+			}
+			#activateSlots,#casinoKitButton2{
+				cursor:pointer;
+			}
+			#casinoKitGroupNumber button{
+				height:35px;
+				width:24px;
+				cursor:pointer;
+				float:left;
+				border:1px solid black;
+				text-align:center;
+			}
+			#casinoKitGroupEffect button{
+				text-align:center;
+				border:1px solid black;
+				float:left;
+				cursor:pointer;
+				height:40px;
+				width:60px;
+			}
+			.casinoKitGroup:after{
+				content:"";
+				clear:both;
+				display:table;
+			}
+			#casinoKitGroupNumber{
+				padding-left:50%;
+				margin-top:30px;
+				margin-bottom:1px;
+				transform:translate(-60px,0px);
+			}
+			#casinoKitGroupEffect{
+				padding-left:50%;
+				margin-top:4px;
+				transform:translate(-60px,0px);
+			}
+			#casinoKitButton2{
+				height:20px;
+				transform:translate(0,300%);
 			}
