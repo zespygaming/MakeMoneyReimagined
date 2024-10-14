@@ -1820,20 +1820,20 @@
 					//document.getElementById('swearInstance1').innerHTML='';
 					//document.getElementById('swearInstance2').innerHTML='';
 					document.getElementById('swearToggle').innerHTML='Hide';
-					//document.getElementById('swearToggle').style.backgroundColor='black';
-					//document.getElementById('swearToggle').style.color='white';
+					document.getElementById('swearToggle').style.backgroundColor='black';
+					document.getElementById('swearToggle').style.color='white';
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					//document.getElementById('swearInstance1').innerHTML='fucking ';
 					//document.getElementById('swearInstance2').innerHTML='shit';
 					document.getElementById('swearToggle').innerHTML='Show';
-					//document.getElementById('swearToggle').style.backgroundColor='white';
-					//document.getElementById('swearToggle').style.color='black';
+					document.getElementById('swearToggle').style.backgroundColor='white';
+					document.getElementById('swearToggle').style.color='black';
 				}else{
 					//document.getElementById('swearInstance1').innerHTML='f***king ';
 					//document.getElementById('swearInstance2').innerHTML='s**t';
 					document.getElementById('swearToggle').innerHTML='Censor';
-					//document.getElementById('swearToggle').style.backgroundColor='rgb(127,127,127)';
-					//document.getElementById('swearToggle').style.color='black';
+					document.getElementById('swearToggle').style.backgroundColor='rgb(127,127,127)';
+					document.getElementById('swearToggle').style.color='black';
 				}
 			}
 			function wrokEternal(){
