@@ -1825,8 +1825,8 @@
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					document.getElementById('swearInstance1').innerHTML='fucking s';
 					document.getElementById('swearInstance2').innerHTML='shit';
-					document.getElementById('swearToggle').innerHTML='Show';
-					document.getElementById('swearToggle').style='background-color:white;color:black;';
+					document.getElementById('swearToggle').style.backgroundColor='white';
+					document.getElementById('swearToggle').style.color='black';
 				}else{
 					document.getElementById('swearInstance1').innerHTML='f***king s';
 					document.getElementById('swearInstance2').innerHTML='s**t';
