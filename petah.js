@@ -1407,7 +1407,7 @@
 																	document.getElementById('casinoNotifi').innerHTML='One More?';
 																break;
 																case 13:
-																	document.getElementById('casinoNotifi').innerHTML='An entire casino update, and you <strong>still</strong> can\'t win <span id=\'swearInstance2\'>s**t</span>';
+																	document.getElementById('casinoNotifi').innerHTML='An entire casino update, and you <strong>still</strong> can\'t win anything';
 																break;
 															}
 													}
@@ -1817,13 +1817,16 @@
 			}
 			function naughtyWordToggle(){
 				if(document.getElementById('swearToggle').innerHTML=='Censor'){
+					document.getElementById('swearInstance1').innerHTML='s';
 					document.getElementById('swearToggle').innerHTML='Hide';
 					document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
+					document.getElementById('swearInstance1').innerHTML='fucking s';
 					document.getElementById('swearToggle').innerHTML='Show';
 					document.getElementById('swearToggle').style='background-color:white;color:black;';
 				}else{
+					document.getElementById('swearInstance1').innerHTML='f**king s';
 					document.getElementById('swearToggle').innerHTML='Censor';
 					document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';
 				}
