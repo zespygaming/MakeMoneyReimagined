@@ -1820,7 +1820,8 @@
 					//document.getElementById('swearInstance1').innerHTML='';
 					//document.getElementById('swearInstance2').innerHTML='';
 					document.getElementById('swearToggle').innerHTML='Hide';
-					document.getElementById('swearToggle').style='background-color:black;color:white;';
+					document.getElementById('swearToggle').style.backgroundColor='black';
+					document.getElementById('swearToggle').style.color='white';
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					//document.getElementById('swearInstance1').innerHTML='fucking ';
 					//document.getElementById('swearInstance2').innerHTML='shit';
