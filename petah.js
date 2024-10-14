@@ -1817,8 +1817,8 @@
 			}
 			function naughtyWordToggle(){
 				if(document.getElementById('swearToggle').innerHTML=='Censor'){
-					//document.getElementById('swearInstance1').innerHTML='s';
-					//document.getElementById('swearInstance2').innerHTML='anything';
+					/*document.getElementById('swearInstance1').innerHTML='s';
+					document.getElementById('swearInstance2').innerHTML='anything';*/
 					document.getElementById('swearToggle').innerHTML='Hide';
 					document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';
