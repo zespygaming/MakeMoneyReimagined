@@ -1822,11 +1822,9 @@
 					document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
-					document.getElementById('swearInstance1').innerHTML='fucking s';
 					document.getElementById('swearToggle').innerHTML='Show';
 					document.getElementById('swearToggle').style='background-color:white;color:black;';
 				}else{
-					document.getElementById('swearInstance1').innerHTML='f**king s';
 					document.getElementById('swearToggle').innerHTML='Censor';
 					document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';
 				}
