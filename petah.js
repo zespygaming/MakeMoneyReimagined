@@ -1820,17 +1820,17 @@
 					//document.getElementById('swearInstance1').innerHTML='';
 					//document.getElementById('swearInstance2').innerHTML='';
 					document.getElementById('swearToggle').innerHTML='Hide';
-					document.getElementById('swearToggle').style='padding:5px;background-color:black;color:white;border-radius:7px;';
+					document.getElementById('swearToggle').style='background-color:black;color:white;';
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					//document.getElementById('swearInstance1').innerHTML='fucking ';
 					//document.getElementById('swearInstance2').innerHTML='shit';
 					document.getElementById('swearToggle').innerHTML='Show';
-					document.getElementById('swearToggle').style='padding:5px;background-color:white;color:black;border-radius:7px;';
+					document.getElementById('swearToggle').style='background-color:white;color:black;';
 				}else{
 					//document.getElementById('swearInstance1').innerHTML='f***king ';
 					//document.getElementById('swearInstance2').innerHTML='s**t';
 					document.getElementById('swearToggle').innerHTML='Censor';
-					document.getElementById('swearToggle').style='padding:5px;background-color:rgb(127,127,127);color:black;border-radius:7px;';
+					document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';
 				}
 			}
 			function wrokEternal(){
