@@ -1825,12 +1825,12 @@
 					break;
 					case 'Hide':
 						document.getElementById('swearInstance1').innerHTML='fucking s';
-						document.getElementById('swearToggle').innerHTML='A';
+						document.getElementById('swearToggle').innerHTML='Show';
 						/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
 					break;
-					case 'A':
+					case 'Show':
 						document.getElementById('swearInstance1').innerHTML='f**king s';
-						document.getElementById('swearToggle').innerHTML='e';
+						document.getElementById('swearToggle').innerHTML='Censor';
 						/*document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';*/
 					break;
 				}
