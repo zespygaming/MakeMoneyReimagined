@@ -1818,10 +1818,10 @@
 			function naughtyWordToggle(){
 				if(document.getElementById('swearToggle').innerHTML=='Censor'){
 					document.getElementById('swearInstance1').innerHTML='s';
-					document.getElementById('swearToggle').innerHTML='Show';
+					document.getElementById('swearToggle').innerHTML='A';
 					/*document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';*/
-				}else if(document.getElementById('swearToggle').innerHTML=='Show'){
+				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					document.getElementById('swearInstance1').innerHTML='fucking s';
 					document.getElementById('swearToggle').innerHTML='Show';
 					/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
