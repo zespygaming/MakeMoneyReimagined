@@ -1337,7 +1337,7 @@
 														document.getElementById('trueMonee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 													}else{
-														switch(casinoResult1){
+														switch(casinoResult2){
 															case 2:
 																document.getElementById('casinoNotifi').innerHTML='Double 2\'s<br>+$'+stakes*3+' (x3)';
 															break;
@@ -1818,12 +1818,12 @@
 			function naughtyWordToggle(){
 				if(document.getElementById('swearToggle').innerHTML=='Censor'){
 					document.getElementById('swearInstance1').innerHTML='s';
-					document.getElementById('swearToggle').innerHTML='A';
+					document.getElementById('swearToggle').innerHTML='Hide';
 					/*document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';*/
 				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
 					document.getElementById('swearInstance1').innerHTML='fucking s';
-					document.getElementById('swearToggle').innerHTML='Show';
+					document.getElementById('swearToggle').innerHTML='A';
 					/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
 				}else{
 					document.getElementById('swearInstance1').innerHTML='f**king s';
