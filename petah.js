@@ -1830,8 +1830,8 @@
 					break;
 					default:
 						document.getElementById('swearInstance1').innerHTML='f**king s';
-						/*document.getElementById('swearToggle').innerHTML='Censor';
-						document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';*/
+						document.getElementById('swearToggle').innerHTML='Censor';
+						/*document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';*/
 				}
 			}
 			function wrokEternal(){
