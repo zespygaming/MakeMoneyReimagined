@@ -1821,7 +1821,7 @@
 					document.getElementById('swearToggle').innerHTML='Show';
 					/*document.getElementById('swearToggle').style.backgroundColor='black';
 					document.getElementById('swearToggle').style.color='white';*/
-				}else if(document.getElementById('swearToggle').innerHTML=='Hide'){
+				}else if(document.getElementById('swearToggle').innerHTML=='Show'){
 					document.getElementById('swearInstance1').innerHTML='fucking s';
 					document.getElementById('swearToggle').innerHTML='Show';
 					/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
