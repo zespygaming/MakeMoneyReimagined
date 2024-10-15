@@ -1820,18 +1820,18 @@
 					case 'Censor':
 						document.getElementById('swearInstance1').innerHTML='s';
 						document.getElementById('swearToggle').innerHTML='Hide';
-						/*document.getElementById('swearToggle').style.backgroundColor='black';
-						document.getElementById('swearToggle').style.color='white';*/
+						document.getElementById('swearToggle').style.backgroundColor='black';
+						document.getElementById('swearToggle').style.color='white';
 					break;
 					case 'Hide':
 						document.getElementById('swearInstance1').innerHTML='fucking s';
 						document.getElementById('swearToggle').innerHTML='Show';
-						/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
+						document.getElementById('swearToggle').style='background-color:white;color:black;';
 					break;
 					case 'Show':
 						document.getElementById('swearInstance1').innerHTML='f**king s';
 						document.getElementById('swearToggle').innerHTML='Censor';
-						/*document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';*/
+						document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';
 					break;
 				}
 			}
