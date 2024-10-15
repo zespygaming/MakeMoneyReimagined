@@ -1828,9 +1828,11 @@
 						document.getElementById('swearToggle').innerHTML='A';
 						/*document.getElementById('swearToggle').style='background-color:white;color:black;';*/
 					break;
-					default:
+					case 'A':
+						document.getElementById('swearInstance1').innerHTML='f**king s';
 						document.getElementById('swearToggle').innerHTML='e';
 						/*document.getElementById('swearToggle').style='background-color:rgb(127,127,127);color:black;';*/
+					break;
 				}
 			}
 			function wrokEternal(){
