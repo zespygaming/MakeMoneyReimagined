@@ -142,10 +142,8 @@
 				border:0.2px solid rgba(30,30,32,0.02);
 				padding-left:11px;
 				padding-right:11px;
-				padding-top:9px;
-				padding-bottom:9px;
 				width:270px;
-				height:150px;
+				height:125px;
 			}
 			#darkLight,#versionTitleToggle,#theOnlyThingTheyFearIsMe{
 				padding:5px;
@@ -191,6 +189,9 @@
 			#casinoKitButton{
 				display:none;
 				cursor:pointer;
+				left:50%;
+				width:150px;
+				transform:translate(-75px,0);
 			}
 			#activateSlots,#casinoKitButton2{
 				cursor:pointer;

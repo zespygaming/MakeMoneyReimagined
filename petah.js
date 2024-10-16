@@ -1025,8 +1025,14 @@
 				var cycle;
 				var specialNumber=Number(document.getElementById('trueCasinoNumber').innerHTML);
 				var specialEffect=Number(document.getElementById('trueCasinoEffect').innerHTML);
+				var stupid=false;
 
 				if(stakes>0){
+					if(stakes>=100000){
+						stupid=true;
+					}else{
+						stupid=false;
+					}
 					if(stakes<=spareMone){
 						document.getElementById('trueMonee').innerHTML=spareMone-stakes;
 						convertMonee();
@@ -1297,7 +1303,7 @@
 															giveAchievementJackpot();
 														}
 													}else if(casinoResult1==1){
-														document.getElementById('casinoNotifi').innerHTML='Minor Triple<br>+$'+stakes*10+' (x10)';
+														document.getElementById('casinoNotifi').innerHTML='Minor Triple!<br>+$'+stakes*10+' (x10)';
 														spareMone+=Number(stakes*10);
 														document.getElementById('trueMonee').innerHTML=spareMone;
 														setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
@@ -1366,12 +1372,12 @@
 															document.getElementById('casinoNotifi').innerHTML='Congrats, you gambled so much you got a 0.1% loss message';
 														break;
 														default:
-															switch(Math.floor(Math.random()*14)){
+															switch(Math.floor(Math.random()*15)){
 																case 0:
 																	document.getElementById('casinoNotifi').innerHTML='You should probably stop wasting your money';
 																break;
 																case 1:
-																	document.getElementById('casinoNotifi').innerHTML='Seriously, stop wasting your money';
+																	document.getElementById('casinoNotifi').innerHTML='Seriously stop wasting your money';
 																break;
 																case 2:
 																	document.getElementById('casinoNotifi').innerHTML='Bruh y u waste money so much';
@@ -1409,7 +1415,12 @@
 																case 13:
 																	document.getElementById('casinoNotifi').innerHTML='An entire casino update, and you <strong>still</strong> can\'t win anything';
 																break;
+																case 14:
+																	document.getElementById('casinoNotifi').innerHTML='Let\'s go gambling!';
 															}
+													}
+													if(stupid==true){
+														giveAchievementSeriously();
 													}
 													setTimeout(function(){document.getElementById('casinoNotifi').innerHTML='';document.getElementById('activateSlots').disabled=false;document.getElementById('casinoKitButton').disabled=false;},3000);
 												}
