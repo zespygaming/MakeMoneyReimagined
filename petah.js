@@ -999,7 +999,7 @@
 			function buyCasinoKit(){
 				if(document.getElementById('affordCasinoKit').innerHTML=='Buy'){
 					document.getElementById('trueMonee').innerHTML-=50000;
-					//document.getElementById('casinoKitButton').style.display='block';
+					document.getElementById('casinoKitButton').style.display='block';
 					document.getElementById('affordCasinoKit').innerHTML='Owned';
 					convertMonee();
 					checkShopPrices();
