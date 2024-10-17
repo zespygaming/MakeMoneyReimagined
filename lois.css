@@ -187,11 +187,10 @@
 				backdrop-filter:blur(0.06rem);
 			}
 			#casinoKitButton{
-				display:none;
+				display:block;
 				cursor:pointer;
-				left:50%;
 				width:150px;
-				transform:translate(-75px,0);
+				margin:auto;
 			}
 			#activateSlots,#casinoKitButton2{
 				cursor:pointer;
