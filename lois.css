@@ -187,8 +187,8 @@
 				backdrop-filter:blur(0.06rem);
 			}
 			#casinoKitButton{
-				cursor:pointer;
 				display:block;
+				width:150px;
 			}
 			#activateSlots,#casinoKitButton2{
 				cursor:pointer;
