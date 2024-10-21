@@ -186,9 +186,6 @@
 				transform:translate(-50%,-50%);
 				backdrop-filter:blur(0.06rem);
 			}
-			#casinoKitButton{
-				width:120px;
-			}
 			#activateSlots,#casinoKitButton2,#casinoKitButton{
 				cursor:pointer;
 			}
