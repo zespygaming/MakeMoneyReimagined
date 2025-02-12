@@ -648,8 +648,10 @@
 
 				if(truMone>=10000){
 					document.getElementById('monee').innerHTML=Math.round(truMone);
+					document.getElementById('titleMoney').innerHTML=Math.round(truMone);
 				}else{
 					document.getElementById('monee').innerHTML=deciMone;
+					document.getElementById('titleMoney').innerHTML=deciMone;
 				}
 
 				if(Number(document.getElementById('monee').innerHTML)>=1000000){
@@ -663,8 +665,11 @@
 
 				if(truIncom>=1000){
 					document.getElementById('incum').innerHTML=Math.round(truIncom);
+					document.getElementById('switchCasinoKitCost').innerHTML=Math.round(truIncom*50);
 				}else{
 					document.getElementById('incum').innerHTML=deciIncom;
+					var below1=Number(Math.round(truMone*500))/10;
+					document.getElementById('switchCasinoKitCost').innerHTML=below1;
 				}
 			}
 		//SHOP
@@ -1549,23 +1554,69 @@
 				document.getElementById('trueCasinoNumber').innerHTML=6;
 			}
             
+			function casinoKitChooseEffect0(){
+				document.getElementById('casinoKitEffect0').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitEffect1').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect3').style.backgroundColor='#f0f0f0';
+				
+				document.getElementById('casinoKitEffect0').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitEffect1').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect3').style.transform='translate(0,0)';
+
+				document.getElementById('trueCasinoEffect').innerHTML=0;
+			}
             function casinoKitChooseEffect1(){
+				var effectIncum1=Number(document.getElementById('incum').innerHTML)*50;
+
+				document.getElementById('casinoKitEffect0').style.backgroundColor='#f0f0f0';
 				document.getElementById('casinoKitEffect1').style.backgroundColor='#d0d0d0';
 				document.getElementById('casinoKitEffect2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect3').style.backgroundColor='#f0f0f0';
 				
+				document.getElementById('casinoKitEffect0').style.transform='translate(0,0)';
 				document.getElementById('casinoKitEffect1').style.transform='translate(0,1px)';
 				document.getElementById('casinoKitEffect2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect3').style.transform='translate(0,0)';
 
 				document.getElementById('trueCasinoEffect').innerHTML=1;
+				document.getElementById('trueMonee').innerHTML-=effectIncum1;
+				convertMonee();
 			}
 			function casinoKitChooseEffect2(){
+				var effectIncum2=Number(document.getElementById('incum').innerHTML)*50;
+
+				document.getElementById('casinoKitEffect0').style.backgroundColor='#f0f0f0';
 				document.getElementById('casinoKitEffect1').style.backgroundColor='#f0f0f0';
 				document.getElementById('casinoKitEffect2').style.backgroundColor='#d0d0d0';
+				document.getElementById('casinoKitEffect3').style.backgroundColor='#f0f0f0';
 				
+				document.getElementById('casinoKitEffect0').style.transform='translate(0,0)';
 				document.getElementById('casinoKitEffect1').style.transform='translate(0,0)';
 				document.getElementById('casinoKitEffect2').style.transform='translate(0,1px)';
+				document.getElementById('casinoKitEffect3').style.transform='translate(0,0)';
 
 				document.getElementById('trueCasinoEffect').innerHTML=2;
+				document.getElementById('trueMonee').innerHTML-=effectIncum2;
+				convertMonee();
+			}
+			function casinoKitChooseEffect3(){
+				var effectIncum3=Number(document.getElementById('incum').innerHTML)*50;
+
+				document.getElementById('casinoKitEffect0').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect1').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect2').style.backgroundColor='#f0f0f0';
+				document.getElementById('casinoKitEffect3').style.backgroundColor='#d0d0d0';
+				
+				document.getElementById('casinoKitEffect0').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect1').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect2').style.transform='translate(0,0)';
+				document.getElementById('casinoKitEffect3').style.transform='translate(0,1px)';
+
+				document.getElementById('trueCasinoEffect').innerHTML=3;
+				document.getElementById('trueMonee').innerHTML-=effectIncum3;
+				convertMonee();
 			}
 		//ACHIEVEMENTS
 			function giveAchievement1Mil(){
@@ -1824,6 +1875,23 @@
 					document.getElementById('versionTitleToggle').innerHTML='Show';
 					document.getElementById('versionTitleToggle').style.backgroundColor='white';
 					document.getElementById('versionTitleToggle').style.color='black';
+				}
+			}
+			function keepingTabs(){
+				var moola=Number(document.getElementById('monee').innerHTML);
+
+				if(document.getElementById('titleMoneyToggle').innerHTML=='Show'){
+					document.getElementById('extraTitleShi').innerHTML='E';
+					document.getElementById('titleMoney').innerHTML='D';
+					document.getElementById('titleMoneyToggle').innerHTML='Hide';
+					document.getElementById('titleMoneyToggle').style.backgroundColor='black';
+					document.getElementById('titleMoneyToggle').style.color='white';
+				}else{
+					document.getElementById('extraTitleShi').innerHTML='D - $';
+					document.getElementById('titleMoney').innerHTML=moola;
+					document.getElementById('titleMoneyToggle').innerHTML='Show';
+					document.getElementById('titleMoneyToggle').style.backgroundColor='white';
+					document.getElementById('titleMoneyToggle').style.color='black';
 				}
 			}
 			function naughtyWordToggle(){
