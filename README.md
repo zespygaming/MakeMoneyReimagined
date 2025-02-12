@@ -4,4 +4,5 @@ First off, I just want to mention its supposed to be "ze spy gaming", but obviou
 <br><br>After some time though I decided to put it on github.
 <br><br>Dw if you're tryna play this at school and your school blocks it,<br>just let me know and I'll reupload this on another account.
 <br><br><a href='https://zespygaming.github.io/MakeMoneyReimagined/'>Playable Link</a>
+<br><a href='http://makemoneyreimagined.infy.uk/'>Alt Link</a>
 <br><br>Current version is a <strong>test release</strong>, it may<br>contain bugs, if you find any please post about it in the discussion tab.
