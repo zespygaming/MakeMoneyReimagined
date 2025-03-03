@@ -1914,7 +1914,7 @@
 
 				if(inputtedPassword=='Money'){
 					devMone=devMone+10000;
-					document.getElementById('trueMonee').innerHTML=10000;
+					document.getElementById('trueMonee').innerHTML=devMone;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertMonee();
 				}/*else if(inputtedPassword=='ISAIDMONEY'){
