@@ -1913,16 +1913,14 @@
 				var inputtedPassword=document.getElementById('devToolsInput').value;
 
 				if(inputtedPassword=='Money'){
-					devMone+=10000;
-					document.getElementById('trueMonee').innerHTML=devMone;
+					devMone=devMone+10000;
+					document.getElementById('trueMonee').innerHTML=10000;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertMonee();
-					checkShopPrices();
 				}/*else if(inputtedPassword=='ISAIDMONEY'){
 					devMone+=500000;
 					document.getElementById('trueMonee').innerHTML=devMone;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertMonee();
-					checkShopPrices();
 				}*/
 			}
