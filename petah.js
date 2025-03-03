@@ -1875,23 +1875,6 @@
 					document.getElementById('versionTitleToggle').style.color='black';
 				}
 			}
-			function keepingTabs(){
-				var moola=Number(document.getElementById('monee').innerHTML);
-
-				if(document.getElementById('titleMoneyToggle').innerHTML=='Show'){
-					document.getElementById('extraTitleShi').innerHTML='E';
-					document.getElementById('titleMoney').innerHTML='D';
-					document.getElementById('titleMoneyToggle').innerHTML='Hide';
-					document.getElementById('titleMoneyToggle').style.backgroundColor='black';
-					document.getElementById('titleMoneyToggle').style.color='white';
-				}else{
-					document.getElementById('extraTitleShi').innerHTML='D - $';
-					document.getElementById('titleMoney').innerHTML=moola;
-					document.getElementById('titleMoneyToggle').innerHTML='Show';
-					document.getElementById('titleMoneyToggle').style.backgroundColor='white';
-					document.getElementById('titleMoneyToggle').style.color='black';
-				}
-			}
 			function naughtyWordToggle(){
 				switch(document.getElementById('swearToggle').innerHTML){
 					case 'Censor':
@@ -1923,4 +1906,22 @@
 					document.getElementById('theOnlyThingTheyFearIsMe').innerHTML='No';
 				}
 				giveAchievementPathetic();
+			}
+		 //DEV SETTINGS
+			function devTools(){
+				var devMone=Number(document.getElementById('trueMonee').innerHTML);
+
+				if(document.getElementById('devToolsInput').innerHTML=='Money'){
+					devMone+=10000;
+					document.getElementById('trueMonee').innerHTML=devMone;
+					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
+					convertIncum();
+					checkShopPrices();
+				}else if(document.getElementById('devToolsInput').innerHTML=='ISAIDMONEY'){
+					devMone+=500000;
+					document.getElementById('trueMonee').innerHTML=devMone;
+					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
+					convertIncum();
+					checkShopPrices();
+				}
 			}
