@@ -648,10 +648,8 @@
 
 				if(truMone>=10000){
 					document.getElementById('monee').innerHTML=Math.round(truMone);
-					document.getElementById('titleMoney').innerHTML=Math.round(truMone);
 				}else{
 					document.getElementById('monee').innerHTML=deciMone;
-					document.getElementById('titleMoney').innerHTML=deciMone;
 				}
 
 				if(Number(document.getElementById('monee').innerHTML)>=1000000){
