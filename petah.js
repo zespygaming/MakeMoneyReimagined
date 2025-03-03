@@ -1910,14 +1910,15 @@
 		 //DEV SETTINGS
 			function devTools(){
 				var devMone=Number(document.getElementById('trueMonee').innerHTML);
+				var inputtedPassword=document.getElementById('devToolsInput').value;
 
-				if(document.getElementById('devToolsInput').innerHTML=='Money'){
+				if(inputtedPassword=='Money'){
 					devMone+=10000;
 					document.getElementById('trueMonee').innerHTML=devMone;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertIncum();
 					checkShopPrices();
-				}else if(document.getElementById('devToolsInput').innerHTML=='ISAIDMONEY'){
+				}else if(inputtedPassword=='Money'){
 					devMone+=500000;
 					document.getElementById('trueMonee').innerHTML=devMone;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
