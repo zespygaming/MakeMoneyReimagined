@@ -1918,11 +1918,11 @@
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertMonee();
 					checkShopPrices();
-				}else if(inputtedPassword=='ISAIDMONEY'){
+				}/*else if(inputtedPassword=='ISAIDMONEY'){
 					devMone+=500000;
 					document.getElementById('trueMonee').innerHTML=devMone;
 					document.getElementById('cheatedMuch').innerHTML='Dev Money Unimagned';
 					convertMonee();
 					checkShopPrices();
-				}
+				}*/
 			}
